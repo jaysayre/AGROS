@@ -1,0 +1,593 @@
+var,desc_esp,desc_eng,varname,states
+G01,Numero de unidades de producción rurales,Number of rural production units,NumUns,
+G02,Unidades de producción rurales con actividad agropecuaria y forestal,Rural production units with agricultural and forestry activity,RPUAAFs,
+G03,Superficie total de las unidades de producción rurales en ha.,Total area of rural production units in ha.,TotAreaUns,
+G04,Superficie sembrada en ha.idades de producción rurales en ha.,Area planted in rural production areas in ha.,ha_sem_PlantedUns,
+G05,Superficie no sembrada en ha.des de producción rurales en ha.,Unsown area in rural production ha.des in ha.,ha_sem_UnsownUns,
+G06,Superficie en descanso en ha.des de producción rurales en ha.,Rest area in rural production ha.des in ha.,RestAreaUns,
+G07,Superficie de riego en ha.ha.des de producción rurales en ha.,Irrigated area in ha.ha.des of rural production in ha.,IrrigAreaUns,
+G08,Superficie de temporal en ha.des de producción rurales en ha.,Rainfed area in rural production ha.des in ha.,RainfedAreaUns,
+G09,Superficie con pastos naturales o agostadero en ha.les en ha.,Surface with natural pastures or rangeland in ha.les in ha.,PastureAreaUns,
+G10,Superficie con bosque o selva en ha.ostadero en ha.les en ha.,Surface with forest or jungle in ha.ostadero in ha.les in ha.,ForestAreaUns,
+G11,Superficie de bosque con pastos para agostadero en ha. en ha.,Area of forest with pastures for rangeland in ha. in ha.,ForestPastureArea,
+G12,Superficie sin vegetación en ha.para agostadero en ha. en ha.,Surface without vegetation in ha. for rangeland in ha. in ha.,NoVegAreaUns,
+G13,Superficie propia o dotación en ha.a agostadero en ha. en ha.,Own area or provision in ha. to rangeland in ha. in ha.,OwnAreaUns,
+G14,Superficie ejidal en ha.ción en ha.a agostadero en ha. en ha.,Ejidal area in ha.tion in ha.a rangeland in ha. in ha.,EjidalAreaUns,
+G15,Superficie comunal en ha.ión en ha.a agostadero en ha. en ha.,Communal area in ha.ión in ha.a rangeland in ha. in ha.,CommunalAreaUns,
+G16,Superficie de propiedad privada en ha.gostadero en ha. en ha.,Private property area in ha.gostadero in ha. in ha.,PrivPropAreaUns,
+G17,Superficie de colonia en ha.ada en ha.gostadero en ha. en ha.,Colony surface area in ha.ada in ha.gostadero in ha. in ha.,ColonyAreaUns,
+G18,Superficie pública en ha.ha.ada en ha.gostadero en ha. en ha.,Public surface in ha.ha.ada in ha.gostadero in ha. in ha.,PublicAreaUns,
+G19,Unidades de producción rurales que obtuvieron crédito o préstamon ha.,Rural production units that obtained credit or loans ha.,UnsCredit,
+G20,Unidades de producción rurales que obtuvieron seguroo o préstamon ha.,Rural production units that obtained insurance or loans.,UnsInsurance,
+G21,Unidades de producción rurales con organización individualéstamon ha.,Rural production units with individual organizationéstamon ha.,UnsIndOrg,
+G22,Total de la mano de obra empleada individualéstamon ha.,Total individual labor employed is ha.,TotIndLabor,
+G23,Total de la mano de obra femenina individualéstamon ha.,Total individual female labor force is ha.,TotFemIndLabor,
+G24,Mano de obra no pagadara femenina individualéstamon ha.,Individual female unpaid labor is available.,UnpaidFemLabor,
+G25,Mano de obra permanentea femenina individualéstamon ha.,Individual permanent female labor force has.,PermFemLabor,
+G26,Existencias de camionetas menores de dos toneladasn ha.,Stocks of trucks less than two tons ha.,SmallTrucks,
+G27,Existencias de camiones mayores de dos toneladasasn ha.,Stocks of trucks larger than two tons per hectare.,LargeTrucks,
+G28,Existencia de tractores mayores de dos toneladasasn ha.,Existence of tractors larger than two tons ha.,LargeTractors,
+G29,Unidades de producción rurales que venden su producción agrícolan ha.,Rural production units that sell their agricultural production.,UnsAgrSales,
+G30,Unidades de producción rurales que venden su producción ganaderan ha.,Rural production units that sell their livestock production ha.,UnsLivestockSales,
+G31,Unidades de producción rurales que venden su producción forestaln ha.,Rural production units that sell their forestry production ha.,UnsForestSales,
+G32,Unidades de producción rurales con cría y explotación de animales ha.,Rural production units with breeding and exploitation of animals ha.,UnsAnimalBreed,
+G33,Unidades de producción rurales con ganado bovinoación de animales ha.,Rural production units with cattle bovine animals ha.,UnsCattle,
+G34,Existencia de bovinos en Unidades de producción ruralesón de animales ha.,Existence of cattle in rural production units of animals ha.,CattleExist,
+G35,Existencia de bovinos machos mayores de tres añosimales ha.,Existence of male cattle over three years of age.,MaleCattleExist,
+G36,Existencia de bovinos hembras mayores de tres añosmales ha.,Existence of female cattle over three years of age per hectare.,FemaleCattleExist,
+G37,Existencia de bovinos machos y hembras de uno a tres añosa.,Existence of male and female cattle from one to three years olda.,CattletoExist,
+G38,Existencia de bovinos machos y hembras menores de un añosa.,Existence of male and female cattle under one year of agea.,CattleUExist,
+G39,Existencia de bovinos sementalesembras menores de un añosa.,Existence of stud bovines under one year old,StudCattleExist,
+G40,Existencia de bovinos de trabajoembras menores de un añosa.,Existence of working cattle,females less than one year old,WorkingCattleExist
+G41,Existencia de bovinos hembras para ordeña ores de un añosa.,Existence of female cattle for milking one-year-old cattle.,MilkingCattleExist,
+G42,Existencia de bovinos hembras para producción de carneñosa.,Existence of female cattle for meat production.,MeatCattleExist,
+G43,Existencia de bovinos hembras de doble propósito carneñosa.,Existence of beefy dual-purpose female cattle.,DualPurposeCattle,
+G44,Existencia de bovinos corrientes doble propósito carneñosa.,Existence of current dual-purpose beef cattle.,CurrentBeefCattle,
+G45,Existencia de bovinos finosentes doble propósito carneñosa.,Existence of fine beef dual-purpose cattle.,FineBeefCattle,
+G46,Existencia de bovinos de cruzaes doble propósito carneñosa.,Existence of dual-purpose beef crossbred cattle.,CrossbreedBeef,
+G47,Existencia de bovinos en libre pastoreopropósito carneñosa.,Existence of free grazing cattle for meat purposes.,FreeGrazeCattle,
+G48,Existencia de bovinos estabuladosstoreopropósito carneñosa.,Existence of stabled cattle for meat purposes.,StabledCattle,
+G49,Existencia de bovinos semiestabuladoseopropósito carneñosa.,Existence of semi-stabled cattle for meat purposes.,SemiStabledCattle,
+G50,Unidades de producción rurales que usan tecnología en bovinosrneñosa.,Rural production units that use technology in cattle.,TechUsedCattle,
+G51,Existencia de porcinos en Unidades de producción ruralesn bovinosrneñosa.,Existence of pigs in rural bovine production units.,PigsExist,
+G52,Existencia de porcinos sementales. ruralesn bovinosrneñosa.,Existence of stud pigs. ruraln bovinesrneñosa.,StudPigsExist,
+G53,Existencia de porcinos hembras para críaesn bovinosrneñosa.,Existence of female pigs for cattle breeding.,BreedingPigsExist,
+G54,Existencia de porcinos menores a ocho semanasovinosrneñosa.,Existence of pigs less than eight weeks old.,PigsUwksExist,
+G55,Existencia de porcinos en engorda o desarrollovinosrneñosa.,Existence of pigs in fattening or wine development.,PigsFattening,
+G56,Existencia de porcinos mayores de seis meseslovinosrneñosa.,Existence of pigs older than six months old.,PigsOverm,
+G57,Existencia de porcinos corrientes seis meseslovinosrneñosa.,Existence of six-month-old common pigs.,CommonPigs,
+G58,Existencia de porcinos finosentes seis meseslovinosrneñosa.,Existence of fine pigs of six months of age.,FinePigs,
+G59,Existencia de porcinos de cruzaes seis meseslovinosrneñosa.,Existence of six-month-old crossbreed pigs.,CrossbreedPigs,
+G60,Unidades de producción rurales que usan tecnología en porcinosneñosa.,Rural production units that use technology in porcinosneñosa.,TechUsedPigs,
+G61,Existencia de gallinas en Unidades de producción ruralesn porcinosneñosa.,Existence of chickens in rural pig production units.,ChickensExist,
+G62,Existencia de otras aves de corral en Unidades de producción ruralesñosa.,Existence of other poultry in rural production units.,OtherPoultryExist,
+G63,Unidades de producción que usan tecnología en aves ruralesñosa.,Production units that use technology in rural birds.,TechUsedBirds,
+G64,Existencia totales de caprinos en Unidades de producción ruralesalesñosa.,Total existence of goats in rural production units in Alalesñosa.,GoatsExist,
+G65,Existencia de caprinos hembras paridase producción ruralesalesñosa.,Existence of female goats calved in rural production in Alcalá.,CalvedGoatsExist,
+G66,Existencia totales de ovinos en Unidades de producción ruralesesalesñosa.,Total stock of sheep in rural production units in Salinas.,SheepExist,
+G67,Existencia de ovinos hembras paridase producción ruralesesalesñosa.,Existence of female sheep lambing in rural Salinas production.,LambedSheepExist,
+G68,Existencia ganado caballar de trabajo en Unidades de producción ruralesa.,Existence of working cattle in rural production unitsa.,WorkHorsesExist,
+G69,Existencia de ganado mular en Unidades de producción rurales producción ruralesa.,Existence of mule livestock in rural production units rural productiona.,MulesExist,
+G70,Existencia de ganado asnal en Unidades de producción rurales producción ruralesa.,Existence of donkey cattle in rural production units rural productiona.,DonkeysExist,
+G71,Existencia de conejos en Unidades de producción ruralesrales producción ruralesa.,Existence of rabbits in rural production unitsrural productiona.,RabbitsExist,
+G72,Existencia de colmenas en Unidades de producción ruralesales producción ruralesa.,Existence of hives in rural production units.,HivesExist,
+G73,Unidades de producción rural usan equipo e instal. ganade. y avícolas.,Rural production units use equipment and installations. won. and poultry.,UnsEquipGanado,
+A01,Unidades de producción rural con superficie de labor,Rural production units with forestry work area,UnsForestryArea,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A02,Unidades de producción rural con cultivos anuales en el ciclo P-V 91es,Rural production units with annual crops in the P-V cycle 91es,UnsAnnuCropsPV,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A03,Superficie total sembrada en el ciclo P-V 91 en ha.o P-V 91es,Total area planted in the P-V 91 cycle in ha.o P-V 91es,TotAreaPV,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A04,Unidades de producción rural con cultivos anuales en ciclo O-I1es,Rural production units with annual crops in the O-I1es cycle,UnsAnnuCropsOI,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A05,Superficie total sembrada en el ciclo O-I en ha,Total area planted in the O-I cycle in ha,TotAreaOI,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A06,Unidades de producción rural con cultivos anuales en ambos ciclos,Rural production units with annual crops in both cycles,UnsAnnuCropsBoth,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A07,Superficie utilizada en ambos ciclos en ha. ambos ciclos,Surface used in both cycles in ha. both cycles,UsedAreaBoth,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A08,Unidades de producción rural con cultivos perennesa. ambos ciclos,Rural production units with perennial crops. both cycles,UnsPerenCrops,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A09,Superficie total ocupada con cultivos perennes en ha.los,Total area occupied with perennial crops in ha.los,TotAreaPeren,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A10,Número de unidades de producción rurales con invernaderos,Number of rural production units with greenhouses,UnsGreenhouses,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A11,Número de unidades de producción rurales con viveroaderos,Number of rural production units with nurseries,UnsNurseries,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A12,Número de Unidades de producción rural que usan tecnología agrícoladeros,Number of rural production units that use agricultural technology,UnsTechAgr,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A13,Unidades de producción rural que usan animales de tiro o yuntaoladeros,Rural production units that use draft animals or yuntaoladeros,UnsDraftAnimals,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A14,Número de unidades de producción rurales que usan tractor,Number of rural production units that use tractor,UnsTractor,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A15,Unidades de producción rural que usan tractor propios que usan tractor,Rural production units that use their own tractors that use tractors,UnsOwnTractor,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A16,Unidades de producción rural que usan equipo e instalaciones agrícolas,Rural production units that use agricultural equipment and facilities,UnsAgrEquip,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A17,Unidades de producción rural sembrada con acelga,Rural production units planted with chard,UnsChard,"CDMX,TLA"
+A18,Superficie sembrada de acelga en hectáreas,Area planted with chard in hectares,ha_sem_Chard,"CDMX,TLA"
+A19,Superficie cosechada de acelga en hectáreas,Harvested chard area in hectares,ha_cos_Chard,"CDMX,TLA"
+A20,Producción obtenida de acelga en toneladas,Chard production obtained in tons,q_Chard,"CDMX,TLA"
+A21,Unidades de producción rural sembrada con ajo,Rural production units planted with garlic,UnsGarlic,"AGS,BCS,GUA,QUE,SLP,ZAC"
+A22,Superficie sembrada de ajo en hectáreas,Area planted with garlic seeds in hectares,ha_sem_Garlic,"AGS,BCS,GUA,QUE,SLP,ZAC"
+A23,Superficie cosechada de ajo en hectáreas,Harvested garlic area in hectares,ha_cos_Garlic,"AGS,BCS,GUA,QUE,SLP,ZAC"
+A24,Producción obtenida de ajo en toneladas,Garlic production obtained in tons,q_Garlic,"AGS,BCS,GUA,QUE,SLP,ZAC"
+A25,Unidades de producción rural sembrada con ajonjolí ,Rural production units planted with sesame,UnsSesame,"BC,CAM,COL,CHP,GRO,JAL,MIC,NAY,OAX,PUE,ROO,SIN,SON,TAB,VER"
+A26,Superficie sembrada de ajonjolí en hectáreas,Area planted with sesame seeds in hectares,ha_sem_Sesame,"BC,CAM,COL,CHP,GRO,JAL,MIC,NAY,OAX,PUE,ROO,SIN,SON,TAB,VER"
+A27,Superficie cosechada de ajonjolí en hectáreas,Harvested sesame area in hectares,ha_cos_Sesame,"BC,CAM,COL,CHP,GRO,JAL,MIC,NAY,OAX,PUE,ROO,SIN,SON,TAB,VER"
+A28,Producción obtenida de ajonjolí en toneladas,Sesame production obtained in tons,q_Sesame,"BC,CAM,COL,CHP,GRO,JAL,MIC,NAY,OAX,PUE,ROO,SIN,SON,TAB,VER"
+A29,Unidades de producción rural sembrada con algodón,Rural production units planted with cotton,UnsCotton,"BC,BCS,CAM,COA,CHP,CHH,DUR,NLE,PUE,SLP,SIN,SON,TAM"
+A30,Superficie sembrada de algodón en ha,Area planted with cotton in ha,ha_sem_Cotton,"BC,BCS,CAM,COA,CHP,CHH,DUR,NLE,PUE,SLP,SIN,SON,TAM"
+A31,Superficie cosechada de algodón en ha,Harvested cotton area in ha,ha_cos_Cotton,"BC,BCS,CAM,COA,CHP,CHH,DUR,NLE,PUE,SLP,SIN,SON,TAM"
+A32,Producción obtenida de algodón en ton,Production obtained from cotton in ton,q_Cotton,"BC,BCS,CAM,COA,CHP,CHH,DUR,NLE,PUE,SLP,SIN,SON,TAM"
+A33,Unidades de producción rural sembrada con alpiste,Rural production units planted with birdseed,UnsBirdseed,"COA,NLE,OAX"
+A34,Superficie sembrada de alpiste en ha,Area planted with birdseed in ha,ha_sem_Birdseed,"COA,NLE,OAX"
+A35,Superficie cosechada de alpiste en ha,Harvested birdseed area in ha,ha_cos_Birdseed,"COA,NLE,OAX"
+A36,Producción obtenida de alpiste en ton,Production obtained from birdseed in ton,q_Birdseed,"COA,NLE,OAX"
+A37,Unidades de producción rural sembrada con amaranto,Rural production units planted with amaranth,UnsAmaranth,"CDMX,MOR,TLA"
+A38,Superficie sembrada de amaranto en ha,Area planted with amaranth in ha,ha_sem_Amaranth,"CDMX,MOR,TLA"
+A39,Superficie cosechada de amaranto en ha,Harvested amaranth area in ha,ha_cos_Amaranth,"CDMX,MOR,TLA"
+A40,Producción obtenida de amaranto en ton,Production obtained from amaranth in ton,q_Amaranth,"CDMX,MOR,TLA"
+A41,Unidades de producción rural sembrada con apio,Rural production units planted with celery,UnsCelery,CDMX
+A42,Superficie sembrada de apio en ha,Area planted with celery in ha,ha_sem_Celery,CDMX
+A43,Superficie cosechada de apio en ha,Harvested celery area in ha,ha_cos_Celery,CDMX
+A44,Producción obtenida de apio en ton,Production obtained from celery in ton,q_Celery,CDMX
+A45,Unidades de producción rural sembrada con arroz,Rural production units planted with rice,UnsRice,"CAM,COL,GRO,JAL,MIC,MOR,NAY,OAX,PUE,ROO,SIN,TAB,TAM,VER"
+A46,Superficie sembrada de arroz en ha,Area planted with rice in ha,ha_sem_Rice,"CAM,COL,GRO,JAL,MIC,MOR,NAY,OAX,PUE,ROO,SIN,TAB,TAM,VER"
+A47,Superficie cosechada de arroz en ha,Harvested rice area in ha,ha_cos_Rice,"CAM,COL,GRO,JAL,MIC,MOR,NAY,OAX,PUE,ROO,SIN,TAB,TAM,VER"
+A48,Producción obtenida de arroz en ton,Production obtained from rice in ton,q_Rice,"CAM,COL,GRO,JAL,MIC,MOR,NAY,OAX,PUE,ROO,SIN,TAB,TAM,VER"
+A49,Unidades producción rural sembrada con avena,Rural production units planted with oats,UnsOats,"COA,CHH,CDMX,DUR,HDO,MEX,MIC,MOR,TLA,ZAC"
+A50,Superficie sembrada de avena  en ha ton,Area planted with oats in ha ton,ha_sem_Oats,"COA,CHH,CDMX,DUR,HDO,MEX,MIC,MOR,TLA,ZAC"
+A51,Superficie cosechada de avena  en ha ton,Harvested area of oats in ha ton,ha_cos_Oats,"COA,CHH,CDMX,DUR,HDO,MEX,MIC,MOR,TLA,ZAC"
+A52,Producción obtenida de avena en ton.ton,Production obtained from oats in ton.ton,q_Oats,"COA,CHH,CDMX,DUR,HDO,MEX,MIC,MOR,TLA,ZAC"
+A53,Unidades producción rural sembrada con avena forrajera,Rural production units planted with oats,UnsOatForage,"AGS,BC,BCS,COA,COL,CHH,CDMX,DUR,GUA,HDO,JAL,MEX,MOR,NLE,OAX,PUE,QUE,SLP,SON,TLA,VER,ZAC"
+A54,Superficie sembrada de avena forrajera en ha,Area planted with oats in ha ton,ha_sem_OatForage,"AGS,BC,BCS,COA,COL,CHH,CDMX,DUR,GUA,HDO,JAL,MEX,MOR,NLE,OAX,PUE,QUE,SLP,SON,TLA,VER,ZAC"
+A55,Superficie cosechada de avena forrajera en ha,Harvested area of oats in ha ton,ha_cos_OatForage,"AGS,BC,BCS,COA,COL,CHH,CDMX,DUR,GUA,HDO,JAL,MEX,MOR,NLE,OAX,PUE,QUE,SLP,SON,TLA,VER,ZAC"
+A56,Producción obtenida de avena forrajera en ton,Production obtained from oats in ton,q_OatForage,"AGS,BC,BCS,COA,COL,CHH,CDMX,DUR,GUA,HDO,JAL,MEX,MOR,NLE,OAX,PUE,QUE,SLP,SON,TLA,VER,ZAC"
+A57,Unidades producción rural sembrada con brócoli,Rural production units planted with broccoli,UnsBroccoli,"AGS,COA,CDMX,GUA,QUE,ZAC"
+A58,Superficie sembrada de brócoli en ha,Area planted with broccoli in ha,ha_sem_Broccoli,"AGS,COA,CDMX,GUA,QUE,ZAC"
+A59,Superficie cosechada de brócoli en ha,Harvested area of broccoli in ha,ha_cos_Broccoli,"AGS,COA,CDMX,GUA,QUE,ZAC"
+A60,Producción obtenida de brócoli en ton,Production obtained from broccoli in ton,q_Broccoli,"AGS,COA,CDMX,GUA,QUE,ZAC"
+A61,Unidades de producción rural sembrada con cacahuate,Rural production units planted with peanut,UnsPeanut,"CAM,COL,CHP,CHH,DUR,GRO,JAL,MOR,NAY,NLE,OAX,PUE,ROO,SLP,SIN,TAB,TAM,VER,YUC"
+A62,Superficie sembrada de cacahuate en hectáreas,Area planted with squash in peanut,ha_sem_Peanut,"CAM,COL,CHP,CHH,DUR,GRO,JAL,MOR,NAY,NLE,OAX,PUE,ROO,SLP,SIN,TAB,TAM,VER,YUC"
+A63,Superficie cosechada de cacahuate en hectáreas,Harvested peanut area in hectares,ha_cos_Peanut,"CAM,COL,CHP,CHH,DUR,GRO,JAL,MOR,NAY,NLE,OAX,PUE,ROO,SLP,SIN,TAB,TAM,VER,YUC"
+A64,Producción obtenida de cacahuate en toneladas,Production obtained from peanut in tons,q_Peanut,"CAM,COL,CHP,CHH,DUR,GRO,JAL,MOR,NAY,NLE,OAX,PUE,ROO,SLP,SIN,TAB,TAM,VER,YUC"
+A65,Unidades de producción rural sembrada con calabacita,Rural production units planted with zucchini,UnsZucchini,"CAM,YUC"
+A66,Superficie sembrada de calabacita en hectáreas,Area planted with zucchini in hectares,ha_sem_Zucchini,"CAM,YUC"
+A67,Superficie cosechada de calabacita en hectáreas,Harvested zucchini area in hectares,ha_cos_Zucchini,"CAM,YUC"
+A68,Producción obtenida de calabacita en toneladas,Production obtained from zucchini in tons,q_Zucchini,"CAM,YUC"
+A69,Unidades de producción rural sembrada con calabaza,Rural production units planted with squash,UnsSquash,"BCS,CAM,COL,CHP,CHH,CDMX,DUR,HDO,JAL,NAY,NLE,OAX,ROO,SIN,TAB,TAM,TLA,VER,YUC,ZAC"
+A70,Superficie sembrada de calabaza en hectáreas,Area planted with squash in hectares,ha_sem_Squash,"BCS,CAM,COL,CHP,CHH,CDMX,DUR,HDO,JAL,NAY,NLE,OAX,ROO,SIN,TAB,TAM,TLA,VER,YUC,ZAC"
+A71,Superficie cosechada de calabaza en hectáreas,Harvested squash area in hectares,ha_cos_Squash,"BCS,CAM,COL,CHP,CHH,CDMX,DUR,HDO,JAL,NAY,NLE,OAX,ROO,SIN,TAB,TAM,TLA,VER,YUC,ZAC"
+A72,Producción obtenida de calabaza en toneladas,Production obtained from squash in tons,q_Squash,"BCS,CAM,COL,CHP,CHH,CDMX,DUR,HDO,JAL,NAY,NLE,OAX,ROO,SIN,TAB,TAM,TLA,VER,YUC,ZAC"
+A73,Unidades de producción rural sembrada con camote,Rural production units planted with sweet potato,UnsSweetPotato,"CAM,COL,CHP,GRO,ROO,TAB,VER,YUC"
+A74,Superficie sembrada de camote en hectáreas,Area planted with sweet potato in hectares,ha_sem_SweetPotato,"CAM,COL,CHP,GRO,ROO,TAB,VER,YUC"
+A75,Superficie cosechada de camote en hectáreas,Harvested sweet potato area in hectares,ha_cos_SweetPotato,"CAM,COL,CHP,GRO,ROO,TAB,VER,YUC"
+A76,Producción obtenida de camote en toneladas,Production obtained from sweet potato in tons,q_SweetPotato,"CAM,COL,CHP,GRO,ROO,TAB,VER,YUC"
+A77,Unidades de producción rural sembrada con cártamo ,Rural production units planted with safflower,UnsSafflower,"BC,COA,DUR,JAL,MIC,PUE,SLP,SIN,SON,TAM"
+A78,Superficie sembrada de cártamo en hectáreas,Area planted with safflower in hectares,ha_sem_Safflower,"BC,COA,DUR,JAL,MIC,PUE,SLP,SIN,SON,TAM"
+A79,Superficie cosechada de cártamo en hectáreas,Harvested safflower area in hectares,ha_cos_Safflower,"BC,COA,DUR,JAL,MIC,PUE,SLP,SIN,SON,TAM"
+A80,Producción obtenida de cártamo en toneladas,Production obtained from safflower in tons,q_Safflower,"BC,COA,DUR,JAL,MIC,PUE,SLP,SIN,SON,TAM"
+A81,Unidades de producción rural sembrada con cebada,Rural production units planted with barley,UnsBarley,"AGS,BC,COA,CHH,CDMX,DUR,GUA,HDO,JAL,MEX,MIC,NLE,PUE,QUE,SLP,SIN,SON,TAM,TLA,VER,ZAC"
+A82,Superficie sembrada de cebada en ha.on,Area sown with barley in ha.on,ha_sem_Barley,"AGS,BC,COA,CHH,CDMX,DUR,GUA,HDO,JAL,MEX,MIC,NLE,PUE,QUE,SLP,SIN,SON,TAM,TLA,VER,ZAC"
+A83,Superficie cosechada de cebada en ha,Harvested area of barley in ha,ha_cos_Barley,"AGS,BC,COA,CHH,CDMX,DUR,GUA,HDO,JAL,MEX,MIC,NLE,PUE,QUE,SLP,SIN,SON,TAM,TLA,VER,ZAC"
+A84,Producción obtenida de cebada en toneladas,Production obtained from barley in tons,q_Barley,"AGS,BC,COA,CHH,CDMX,DUR,GUA,HDO,JAL,MEX,MIC,NLE,PUE,QUE,SLP,SIN,SON,TAM,TLA,VER,ZAC"
+A85,Unidades de producción rural sembrada con cebada forrejera,Rural production units planted with forage barley,UnsBarleyForage,"BC,COA,NLE,SLP,SON"
+A86,Superficie sembrada de cebada forrejera en hectáreas,Area planted with forage barley in hectares,ha_sem_BarleyForage,"BC,COA,NLE,SLP,SON"
+A87,Superficie cosechada de cebada forrejera en hectáreas,Harvested forage barley area in hectares,ha_cos_BarleyForage,"BC,COA,NLE,SLP,SON"
+A88,Producción obtenida de cebada forrejera en toneladas,Forage barley production obtained in tons,q_BarleyForage,"BC,COA,NLE,SLP,SON"
+A89,Unidades de producción rural sembrada con cebolla ,Rural production units planted with onion,UnsOnion,"AGS,BC,BCS,CHH,DUR,GUA,JAL,MEX,MIC,MOR,QUE,SLP,SON,TAB,TAM,ZAC"
+A90,Superficie sembrada de cebolla en hectáreas,Area planted with onion in hectares,ha_sem_Onion,"AGS,BC,BCS,CHH,DUR,GUA,JAL,MEX,MIC,MOR,QUE,SLP,SON,TAB,TAM,ZAC"
+A91,Superficie cosechada de cebolla en hectáreas,Harvested onion area in hectares,ha_cos_Onion,"AGS,BC,BCS,CHH,DUR,GUA,JAL,MEX,MIC,MOR,QUE,SLP,SON,TAB,TAM,ZAC"
+A92,Producción obtenida de cebolla en toneladas,Onion production obtained in tons,q_Onion,"AGS,BC,BCS,CHH,DUR,GUA,JAL,MEX,MIC,MOR,QUE,SLP,SON,TAB,TAM,ZAC"
+A93,Unidades de producción rural sembrada con chícharo,Rural production units planted with pea,UnsPea,"BC,BCS,COL,GUA,HDO,MEX,OAX,QUE,TLA"
+A94,Superficie sembrada de chícharo en hectáreas,Area planted with pea in hectares,ha_sem_Pea,"BC,BCS,COL,GUA,HDO,MEX,OAX,QUE,TLA"
+A95,Superficie cosechada de chícharo en hectáreas,Harvested pea area in hectares,ha_cos_Pea,"BC,BCS,COL,GUA,HDO,MEX,OAX,QUE,TLA"
+A96,Producción obtenida de chícharo en toneladas,Production obtained from pea in tons,q_Pea,"BC,BCS,COL,GUA,HDO,MEX,OAX,QUE,TLA"
+A97,Unidades de producción rural sembrada con chilacayote,Rural production units planted with chilacayote,UnsChilacayote,OAX
+A98,Superficie sembrada de chilacayote en hectáreas,Area planted with chilacayote in hectares,ha_sem_Chilacayote,OAX
+A99,Superficie cosechada de chilacayote en hectáreas,Harvested chilacayote area in hectares,ha_cos_Chilacayote,OAX
+A100,Producción obtenida de chilacayote en toneladas,Production obtained from chilacayote in tons,q_Chilacayote,OAX
+A101,Unidades de producción rural sembrada con chile ,Rural production units planted with chili,UnsChili,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,DUR,GUA,GRO,HDO,JAL,MIC,MOR,NAY,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,VER,YUC,ZAC"
+A102,Superficie sembrada de chile en hectáreas,Area planted with chili in hectares,ha_sem_Chili,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,DUR,GUA,GRO,HDO,JAL,MIC,MOR,NAY,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,VER,YUC,ZAC"
+A103,Superficie cosechada de chile en hectáreas,Harvested chile area in hectares,ha_cos_Chili,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,DUR,GUA,GRO,HDO,JAL,MIC,MOR,NAY,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,VER,YUC,ZAC"
+A104,Producción obtenida de chile en toneladas,Production obtained from chili in tons,q_Chili,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,DUR,GUA,GRO,HDO,JAL,MIC,MOR,NAY,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,VER,YUC,ZAC"
+A105,Unidades de producción rural sembrada con cilantro,Rural production units planted with cilantro,UnsCilantro,"BC,CHP,HDO,PUE,ROO,TAB,TLA,YUC"
+A106,Superficie sembrada de cilantro en hectáreas,Area planted with cilantro in hectares,ha_sem_Cilantro,"BC,CHP,HDO,PUE,ROO,TAB,TLA,YUC"
+A107,Superficie cosechada de cilantro en hectáreas,Cilantro harvested area in hectares,ha_cos_Cilantro,"BC,CHP,HDO,PUE,ROO,TAB,TLA,YUC"
+A108,Producción obtenida de cilantro en toneladas,Production obtained from cilantro in tons,q_Cilantro,"BC,CHP,HDO,PUE,ROO,TAB,TLA,YUC"
+A109,Unidades de producción rural sembrada con clavel,Rural production units planted with carnation,UnsCarnation,MEX
+A110,Superficie sembrada de clavel en hectáreas,Area planted with carnation in hectares,ha_sem_Carnation,MEX
+A111,Superficie cosechada de clavel en hectáreas,Carnation harvested area in hectares,ha_cos_Carnation,MEX
+A112,Producción obtenida de clavel en toneladas,Production obtained from carnation in tons,q_Carnation,MEX
+A113,Unidades de producción rural sembrada con col,Rural production units planted with cabbage,UnsCabbage,"AGS,BC,CHP,PUE,SLP,TAB,YUC,ZAC"
+A114,Superficie sembrada de col en hectáreas,Area planted with cabbage in hectares,ha_sem_Cabbage,"AGS,BC,CHP,PUE,SLP,TAB,YUC,ZAC"
+A115,Superficie cosechada de col en hectáreas,Cabbage harvested area in hectares,ha_cos_Cabbage,"AGS,BC,CHP,PUE,SLP,TAB,YUC,ZAC"
+A116,Producción obtenida de col en toneladas,Production obtained from cabbage in tons,q_Cabbage,"AGS,BC,CHP,PUE,SLP,TAB,YUC,ZAC"
+A117,Unidades de producción rural sembrada con coliflor,Rural production units planted with cauliflower,UnsCauliflower,"AGS,CDMX,GUA,QUE,SON"
+A118,Superficie sembrada de coliflor en hectáreas,Area planted with cauliflower in hectares,ha_sem_Cauliflower,"AGS,CDMX,GUA,QUE,SON"
+A119,Superficie cosechada de coliflor en hectáreas,Cauliflower harvested area in hectares,ha_cos_Cauliflower,"AGS,CDMX,GUA,QUE,SON"
+A120,Producción obtenida de coliflor en toneladas,Production obtained from cauliflower in tons,q_Cauliflower,"AGS,CDMX,GUA,QUE,SON"
+A121,Unidades de producción rural sembrada con crisantemo ,Rural production units planted with chrysanthemum,UnsChrysanthemum,MEX
+A122,Superficie sembrada de crisantemo en hectáreas,Area planted with chrysanthemum in hectares,ha_sem_Chrysanthemum,MEX
+A123,Superficie cosechada de crisantemo en hectáreas,Chrysanthemum harvested area in hectares,ha_cos_Chrysanthemum,MEX
+A124,Producción obtenida de crisantemo en toneladas,Production obtained from chrysanthemum in tons,q_Chrysanthemum,MEX
+A125,Unidades de producción rural sembrada con ebo ,Rural production units planted with ebo,UnsEbo,"CDMX,MEX,MIC,MOR,TLA"
+A126,Superficie sembrada de ebo en hectáreas,Area planted with ebo in hectares,ha_sem_Ebo,"CDMX,MEX,MIC,MOR,TLA"
+A127,Superficie cosechada de ebo en hectáreas,Ebo harvested area in hectares,ha_cos_Ebo,"CDMX,MEX,MIC,MOR,TLA"
+A128,Producción obtenida de ebo en toneladas,Production obtained from ebo in tons,q_Ebo,"CDMX,MEX,MIC,MOR,TLA"
+A129,Unidades de producción rural sembrada con espinaca,Rural production units planted with spinach,UnsSpinach,"CDMX,TLA"
+A130,Superficie sembrada de espinaca en hectáreas,Area planted with spinach in hectares,ha_sem_Spinach,"CDMX,TLA"
+A131,Superficie cosechada de espinaca en hectáreas,Spinach harvested area in hectares,ha_cos_Spinach,"CDMX,TLA"
+A132,Producción obtenida de espinaca en toneladas,Production obtained from spinach in tons,q_Spinach,"CDMX,TLA"
+A133,Unidades de producción rural sembrada con estropajo,Rural production units planted with estropajo,UnsEstropajo,GRO
+A134,Superficie sembrada de estropajo en hectáreas,Area planted with estropajo in hectares,ha_sem_Estropajo,GRO
+A135,Superficie cosechada de estropajo en hectáreas,Estropajo harvested area in hectares,ha_cos_Estropajo,GRO
+A136,Producción obtenida de estropajo en toneladas,Production obtained from estropajo in tons,q_Estropajo,GRO
+A137,Unidades de producción rural sembrada con frijol ,Rural production units planted with beans,UnsBeans,"AGS,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A138,Superficie sembrada de frijol en hectáreas,Area planted with beans in hectares,ha_sem_Beans,"AGS,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A139,Superficie cosechada de frijol en hectáreas,Harvested bean area in hectares,ha_cos_Beans,"AGS,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A140,Producción obtenida de frijol en toneladas,Production obtained from beans in tons,q_Beans,"AGS,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A141,Unidades de producción rural sembrada con garbanzo ,Rural production units planted with chickpeas,UnsChickpeas,"BCS,GUA,GRO,JAL,MIC,NAY,OAX,PUE,QUE,SLP,SIN,SON"
+A142,Superficie sembrada de garbanzo en hectáreas,Area planted with chickpeas in hectares,ha_sem_Chickpeas,"BCS,GUA,GRO,JAL,MIC,NAY,OAX,PUE,QUE,SLP,SIN,SON"
+A143,Superficie cosechada de garbanzo en hectáreas,Harvested chickpea area in hectares,ha_cos_Chickpeas,"BCS,GUA,GRO,JAL,MIC,NAY,OAX,PUE,QUE,SLP,SIN,SON"
+A144,Producción obtenida de garbanzo en toneladas,Chickpea production obtained in tons,q_Chickpeas,"BCS,GUA,GRO,JAL,MIC,NAY,OAX,PUE,QUE,SLP,SIN,SON"
+A145,Unidades de producción rural sembrada con girasol,Rural production units planted with sunflower,UnsSunflower,CAM
+A146,Superficie sembrada de girasol en hectáreas,Area planted with sunflower in hectares,ha_sem_Sunflower,CAM
+A147,Superficie cosechada de girasol en hectáreas,Harvested sunflower area in hectares,ha_cos_Sunflower,CAM
+A148,Producción obtenida de girasol en toneladas,Sunflower production obtained in tons,q_Sunflower,CAM
+A149,Unidades de producción rural sembrada con gladiola,Rural production units planted with gladiola,UnsGladiola,GRO
+A150,Superficie sembrada de gladiola en hectáreas,Area planted with gladiola in hectares,ha_sem_Gladiola,GRO
+A151,Superficie cosechada de gladiola en hectáreas,Harvested gladiola area in hectares,ha_cos_Gladiola,GRO
+A152,Producción obtenida de gladiola en toneladas,Gladiola production obtained in tons,q_Gladiola,GRO
+A153,Unidades de producción rural sembrada con gombo,Rural production units planted with okra,UnsOkra,"GRO,MOR,TAM"
+A154,Superficie sembrada de gombo en hectáreas,Area planted with okra in hectares,ha_sem_Okra,"GRO,MOR,TAM"
+A155,Superficie cosechada de gombo en hectáreas,Harvested okra area in hectares,ha_cos_Okra,"GRO,MOR,TAM"
+A156,Producción obtenida de gombo en toneladas,Okra production obtained in tons,q_Okra,"GRO,MOR,TAM"
+A157,Unidades de producción rural sembrada con haba,Rural production units planted with broad bean,UnsBroadBean,"CDMX,HDO,MEX,MOR,OAX,TLA,VER"
+A158,Superficie sembrada de haba en hectáreas,Area planted with broad bean in hectares,ha_sem_BroadBean,"CDMX,HDO,MEX,MOR,OAX,TLA,VER"
+A159,Superficie cosechada de haba en hectáreas,Harvested broad bean area in hectares,ha_cos_BroadBean,"CDMX,HDO,MEX,MOR,OAX,TLA,VER"
+A160,Producción obtenida de haba en toneladas,Broad bean production obtained in tons,q_BroadBean,"CDMX,HDO,MEX,MOR,OAX,TLA,VER"
+A161,Unidades de producción rural sembrada con jamaica,Rural production units planted with hibiscus,UnsHibiscus,"COL,GRO,NAY,TAB"
+A162,Superficie sembrada de jamaica en hectáreas,Area planted with hibiscus in hectares,ha_sem_Hibiscus,"COL,GRO,NAY,TAB"
+A163,Superficie cosechada de jamaica en hectáreas,Harvested hibiscus area in hectares,ha_cos_Hibiscus,"COL,GRO,NAY,TAB"
+A164,Producción obtenida de jamaica en toneladas,Hibiscus production obtained in tons,q_Hibiscus,"COL,GRO,NAY,TAB"
+A165,Unidades de producción rural sembrada con jícama,Rural production units planted with jicama,UnsJicama,"CAM,COL,GRO,MOR,NAY,ROO,YUC"
+A166,Superficie sembrada de jícama en hectáreas,Area planted with jicama in hectares,ha_sem_Jicama,"CAM,COL,GRO,MOR,NAY,ROO,YUC"
+A167,Superficie cosechada de jícama en hectáreas,Harvested jicama area in hectares,ha_cos_Jicama,"CAM,COL,GRO,MOR,NAY,ROO,YUC"
+A168,Producción obtenida de jícama en toneladas,Jicama production obtained in tons,q_Jicama,"CAM,COL,GRO,MOR,NAY,ROO,YUC"
+A169,Unidades de producción rural sembrada con jitomate ,Rural production units planted with tomatoes,UnsTomatoes,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,YUC,ZAC"
+A170,Superficie sembrada de jitomate en hectáreas,Area planted with tomatoes in hectares,ha_sem_Tomatoes,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,YUC,ZAC"
+A171,Superficie cosechada de jitomate en hectáreas,Harvested tomato area in hectares,ha_cos_Tomatoes,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,YUC,ZAC"
+A172,Producción obtenida de jitomate en toneladas,Tomato production obtained in tons,q_Tomatoes,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,YUC,ZAC"
+A173,Unidades de producción rural sembrada con lechuga,Rural production units planted with lettuce,UnsLettuce,"AGS,BC,CDMX,GUA,HDO,QUE,SLP,TLA,ZAC"
+A174,Superficie sembrada de lechuga en hectáreas,Area planted with lettuce in hectares,ha_sem_Lettuce,"AGS,BC,CDMX,GUA,HDO,QUE,SLP,TLA,ZAC"
+A175,Superficie cosechada de lechuga en hectáreas,Harvested lettuce area in hectares,ha_cos_Lettuce,"AGS,BC,CDMX,GUA,HDO,QUE,SLP,TLA,ZAC"
+A176,Producción obtenida de lechuga en toneladas,Lettuce production obtained in tons,q_Lettuce,"AGS,BC,CDMX,GUA,HDO,QUE,SLP,TLA,ZAC"
+A177,Unidades de producción rural sembrada con lenteja ,Rural production units planted with lentils,UnsLentils,"GUA,MIC,QUE"
+A178,Superficie sembrada de lenteja en hectáreas,Area sown with lentils in hectares,ha_sem_Lentils,"GUA,MIC,QUE"
+A179,Superficie cosechada de lenteja en hectáreas,Harvested lentil area in hectares,ha_cos_Lentils,"GUA,MIC,QUE"
+A180,Producción obtenida de lenteja en toneladas,Lentil production obtained in tons,q_Lentils,"GUA,MIC,QUE"
+A181,Unidades de producción rural sembrada con maíz,Rural production units planted with corn,UnsCorn,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A182,Superficie sembrada de maíz en ha,Area planted with corn in ha,ha_sem_Corn,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A183,Superficie cosechada de maíz en ha,Harvested corn area in ha,ha_cos_Corn,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A184,Producción obtenida de maíz en ton,Production obtained from corn in tons,q_Corn,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+A185,Unidades de producción rural sembrada con maíz forrajero,Rural production units planted with corn silage,UnsCornSilage,"AGS,BCS,COA,COL,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,NLE,QUE,TLA,ZAC"
+A186,Superficie sembrada de maíz forrajero en ha,Area planted with corn silage in ha,ha_sem_CornSilage,"AGS,BCS,COA,COL,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,NLE,QUE,TLA,ZAC"
+A187,Superficie cosechada de maíz forrajero en ha,Harvested corn silage area in ha,ha_cos_CornSilage,"AGS,BCS,COA,COL,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,NLE,QUE,TLA,ZAC"
+A188,Producción obtenida de maíz forrajero en ton,Production obtained from corn silage in tons,q_CornSilage,"AGS,BCS,COA,COL,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,NLE,QUE,TLA,ZAC"
+A189,Unidades de producción rural sembrada con melón ,Rural production units planted with melon,UnsMelon,"BC,BCS,CAM,COA,COL,CHP,CHH,DUR,GRO,JAL,MIC,NAY,NLE,OAX,ROO,SIN,SON,TAB,TAM,YUC"
+A190,Superficie sembrada de melón en hectáreas,Area planted with melon in hectares,ha_sem_Melon,"BC,BCS,CAM,COA,COL,CHP,CHH,DUR,GRO,JAL,MIC,NAY,NLE,OAX,ROO,SIN,SON,TAB,TAM,YUC"
+A191,Superficie cosechada de melón en hectáreas,Harvested melon area in hectares,ha_cos_Melon,"BC,BCS,CAM,COA,COL,CHP,CHH,DUR,GRO,JAL,MIC,NAY,NLE,OAX,ROO,SIN,SON,TAB,TAM,YUC"
+A192,Producción obtenida de melón en toneladas,Melon production obtained in tons,q_Melon,"BC,BCS,CAM,COA,COL,CHP,CHH,DUR,GRO,JAL,MIC,NAY,NLE,OAX,ROO,SIN,SON,TAB,TAM,YUC"
+A193,Unidades de producción rural sembrada con nabo,Rural production units planted with turnip,UnsTurnip,HDO
+A194,Superficie sembrada de nabo en hectáreas,Area planted with turnip in hectares,ha_sem_Turnip,HDO
+A195,Superficie cosechada de nabo en hectáreas,Harvested turnip area in hectares,ha_cos_Turnip,HDO
+A196,Producción obtenida de nabo en toneladas,Turnip production obtained in tons,q_Turnip,HDO
+A197,Unidades de producción rural sembrada con papa ,Rural production units planted with potatoes,UnsPotatoes,"AGS,BC,BCS,COA,CHP,CHH,CDMX,DUR,GUA,HDO,MEX,MIC,MOR,NAY,NLE,OAX,PUE,SIN,SON,TLA,VER,ZAC"
+A198,Superficie sembrada de papa en hectáreas,Area planted with potatoes in hectares,ha_sem_Potatoes,"AGS,BC,BCS,COA,CHP,CHH,CDMX,DUR,GUA,HDO,MEX,MIC,MOR,NAY,NLE,OAX,PUE,SIN,SON,TLA,VER,ZAC"
+A199,Superficie cosechada de papa en hectáreas,Harvested potato area in hectares,ha_cos_Potatoes,"AGS,BC,BCS,COA,CHP,CHH,CDMX,DUR,GUA,HDO,MEX,MIC,MOR,NAY,NLE,OAX,PUE,SIN,SON,TLA,VER,ZAC"
+A200,Producción obtenida de papa en toneladas,Potato production obtained in tons,q_Potatoes,"AGS,BC,BCS,COA,CHP,CHH,CDMX,DUR,GUA,HDO,MEX,MIC,MOR,NAY,NLE,OAX,PUE,SIN,SON,TLA,VER,ZAC"
+A201,Unidades de producción rural sembrada con pepino ,Rural production units planted with cucumber,UnsCucumber,"AGS,BC,BCS,COL,CHP,HDO,MEX,MIC,MOR,NAY,ROO,SIN,TAB,TAM,YUC"
+A202,Superficie sembrada de pepino en hectáreas,Area planted with cucumber in hectares,ha_sem_Cucumber,"AGS,BC,BCS,COL,CHP,HDO,MEX,MIC,MOR,NAY,ROO,SIN,TAB,TAM,YUC"
+A203,Superficie cosechada de pepino en hectáreas,Harvested cucumber area in hectares,ha_cos_Cucumber,"AGS,BC,BCS,COL,CHP,HDO,MEX,MIC,MOR,NAY,ROO,SIN,TAB,TAM,YUC"
+A204,Producción obtenida de pepino en toneladas,Cucumber production obtained in tons,q_Cucumber,"AGS,BC,BCS,COL,CHP,HDO,MEX,MIC,MOR,NAY,ROO,SIN,TAB,TAM,YUC"
+A205,Unidades de producción rural sembrada con rábano,Rural production units planted with radish,UnsRadish,"BC,CAM,CHP,NAY,ROO,TAB,YUC"
+A206,Superficie sembrada de rábano en hectáreas,Area planted with radish in hectares,ha_sem_Radish,"BC,CAM,CHP,NAY,ROO,TAB,YUC"
+A207,Superficie cosechada de rábano en hectáreas,Harvested radish area in hectares,ha_cos_Radish,"BC,CAM,CHP,NAY,ROO,TAB,YUC"
+A208,Producción obtenida de rábano en toneladas,Production obtained from radish in tons,q_Radish,"BC,CAM,CHP,NAY,ROO,TAB,YUC"
+A209,Unidades de producción rural sembrada con romeritos,Rural production units planted with romeritos,UnsRomeritos,CDMX
+A210,Superficie sembrada de romeritos en hectáreas,Area planted with romeritos in hectares,ha_sem_Romeritos,CDMX
+A211,Superficie cosechada de romeritos en hectáreas,Harvested romeritos area in hectares,ha_cos_Romeritos,CDMX
+A212,Producción obtenida de romeritos en toneladas,Production obtained from romeritos in tons,q_Romeritos,CDMX
+A213,Unidades de producción rural sembrada con sandía,Rural production units planted with watermelon,UnsWatermelon,"BCS,CAM,COA,COL,CHP,CHH,DUR,GRO,JAL,NAY,NLE,OAX,ROO,SIN,SON,TAB,TAM,VER,YUC"
+A214,Superficie sembrada de sandía en hectáreas,Area planted with watermelon in hectares,ha_sem_Watermelon,"BCS,CAM,COA,COL,CHP,CHH,DUR,GRO,JAL,NAY,NLE,OAX,ROO,SIN,SON,TAB,TAM,VER,YUC"
+A215,Superficie cosechada de sandía en hectáreas,Harvested watermelon area in hectares,ha_cos_Watermelon,"BCS,CAM,COA,COL,CHP,CHH,DUR,GRO,JAL,NAY,NLE,OAX,ROO,SIN,SON,TAB,TAM,VER,YUC"
+A216,Producción obtenida de sandía en toneladas,Production obtained from watermelon in tons,q_Watermelon,"BCS,CAM,COA,COL,CHP,CHH,DUR,GRO,JAL,NAY,NLE,OAX,ROO,SIN,SON,TAB,TAM,VER,YUC"
+A217,Unidades de producción rural sembrada con sorgo ,Rural production units planted with sorghum,UnsSorghum,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,VER,ZAC"
+A218,Superficie sembrada de sorgo en hectáreas,Area planted with sorghum in hectares,ha_sem_Sorghum,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,VER,ZAC"
+A219,Superficie cosechada de sorgo en hectáreas,Harvested sorghum area in hectares,ha_cos_Sorghum,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,VER,ZAC"
+A220,Producción obtenida de sorgo en toneladas,Production obtained from sorghum in tons,q_Sorghum,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,VER,ZAC"
+A221,Unidades de producción r. sembrada con sorgo escobero,Production units r. planted with broom sorghum,UnsBroomSorghum,"COA,DUR,NLE,SIN,TAM"
+A222,Superficie sembrada de sorgo escobero en ha.,Area planted with broom sorghum in ha.,ha_sem_BroomSorghum,"COA,DUR,NLE,SIN,TAM"
+A223,Superficie cosechada de sorgo escobero  en ha.,Harvested area of broom sorghum in ha.,ha_cos_BroomSorghum,"COA,DUR,NLE,SIN,TAM"
+A224,P. obtenida de sorgo escobero en ton.,P. obtained from broom sorghum in tons.,q_BroomSorghum,"COA,DUR,NLE,SIN,TAM"
+A225,Unidades de producción r. sembrada con sorgo forrajero ,Production units r. planted with forage sorghum,UnsForageSorghum,"AGS,BCS,COA,COL,CHP,CHH,DUR,GRO,HDO,JAL,MIC,NAY,NLE,QUE,SLP,SON,TAM,VER,ZAC"
+A226,Superficie sembrada de sorgo forrajero en ha.,Area planted with forage sorghum in ha.,ha_sem_ForageSorghum,"AGS,BCS,COA,COL,CHP,CHH,DUR,GRO,HDO,JAL,MIC,NAY,NLE,QUE,SLP,SON,TAM,VER,ZAC"
+A227,Superficie cosechada de sorgo forrajero  en ha.,Harvested area of forage sorghum in ha.,ha_cos_ForageSorghum,"AGS,BCS,COA,COL,CHP,CHH,DUR,GRO,HDO,JAL,MIC,NAY,NLE,QUE,SLP,SON,TAM,VER,ZAC"
+A228,P. obtenida de sorgo forrajero  en ton.,P. obtained from forage sorghum in tons.,q_ForageSorghum,"AGS,BCS,COA,COL,CHP,CHH,DUR,GRO,HDO,JAL,MIC,NAY,NLE,QUE,SLP,SON,TAM,VER,ZAC"
+A229,Unidades de producción r. sembrada con soya,Production units r. planted with soy,UnsSoy,"CAM,CHP,CHH,NLE,PUE,SLP,SIN,SON,TAM,VER"
+A230,Superficie sembrada de soya en ha.,Area planted with soy in ha.,ha_sem_Soy,"CAM,CHP,CHH,NLE,PUE,SLP,SIN,SON,TAM,VER"
+A231,Superficie cosechada de soya en ha.,Harvested area of soy in ha.,ha_cos_Soy,"CAM,CHP,CHH,NLE,PUE,SLP,SIN,SON,TAM,VER"
+A232,P. obtenida de soya en ton.,P. obtained from soy in tons.,q_Soy,"CAM,CHP,CHH,NLE,PUE,SLP,SIN,SON,TAM,VER"
+A233,Unidades de producción r. sembrada con tabaco en ,Production units r. planted with tobacco in,UnsTobacco,"NAY,TAB,VER"
+A234,Superficie sembrada de tabaco en ha.,Area planted with tobacco in ha.,ha_sem_Tobacco,"NAY,TAB,VER"
+A235,Superficie cosechada de tabaco en ha.,Harvested area of tobacco in ha.,ha_cos_Tobacco,"NAY,TAB,VER"
+A236,P. obtenida de tabaco en ton.a.,P. obtained from tobacco in ton.a.,q_Tobacco,"NAY,TAB,VER"
+A237,Unidades de producción r. sembrada con tomate verde en ,Production units r. planted with green tomatoes in,UnsGreenTomatoes,"AGS,BCS,COL,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,OAX,PUE,QUE,SLP,TLA,VER,ZAC"
+A238,Superficie sembrada de tomate verde en ha.,Area planted with green tomatoes in ha.,ha_sem_GreenTomatoes,"AGS,BCS,COL,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,OAX,PUE,QUE,SLP,TLA,VER,ZAC"
+A239,Superficie cosechada de tomate verde en ha.,Harvested area of green tomato in ha.,ha_cos_GreenTomatoes,"AGS,BCS,COL,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,OAX,PUE,QUE,SLP,TLA,VER,ZAC"
+A240,P. obtenida de tomate verde en ton.a.,P. obtained from green tomato in ton.a.,q_GreenTomatoes,"AGS,BCS,COL,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,OAX,PUE,QUE,SLP,TLA,VER,ZAC"
+A241,Unidades de producción rural sembrada con trigo ,Rural production units planted with wheat,UnsWheat,"AGS,BC,BCS,CAM,COA,CHH,DUR,GUA,HDO,JAL,MEX,MIC,MOR,NLE,OAX,PUE,QUE,SLP,SIN,SON,TAM,TLA,VER,ZAC"
+A242,Superficie sembrada de trigo en ha,Area sown with wheat in ha,ha_sem_Wheat,"AGS,BC,BCS,CAM,COA,CHH,DUR,GUA,HDO,JAL,MEX,MIC,MOR,NLE,OAX,PUE,QUE,SLP,SIN,SON,TAM,TLA,VER,ZAC"
+A243,Superficie cosechada de trigo en ha,Harvested wheat area in ha,ha_cos_Wheat,"AGS,BC,BCS,CAM,COA,CHH,DUR,GUA,HDO,JAL,MEX,MIC,MOR,NLE,OAX,PUE,QUE,SLP,SIN,SON,TAM,TLA,VER,ZAC"
+A244,Producción obtenida de trigo en ton,Production obtained from wheat in ton,q_Wheat,"AGS,BC,BCS,CAM,COA,CHH,DUR,GUA,HDO,JAL,MEX,MIC,MOR,NLE,OAX,PUE,QUE,SLP,SIN,SON,TAM,TLA,VER,ZAC"
+A245,Unidades de producción rural sembrada con trigo forrajero,Rural production units planted with wheat forage,UnsWheatForage,CHH
+A246,Superficie sembrada de trigo forrajero en ha,Area sown with wheat forage in ha,ha_sem_WheatForage,CHH
+A247,Superficie cosechada de trigo forrajero en ha,Harvested wheat forage area in ha,ha_cos_WheatForage,CHH
+A248,Producción obtenida de trigo forrajero en ton,Production obtained from wheat forage in ton,q_WheatForage,CHH
+A249,Unidades de producción rural sembrada con verdolaga,Rural production units planted with purslane,UnsPurslane,CDMX
+A250,Superficie sembrada de verdolaga en ha,Area sown with purslane in ha,ha_sem_Purslane,CDMX
+A251,Superficie cosechada de verdolaga en ha,Harvested purslane area in ha,ha_cos_Purslane,CDMX
+A252,Producción obtenida de verdolaga en ton,Production obtained from purslane in ton,q_Purslane,CDMX
+A253,Unidades de producción rural sembrada con yuca,Rural production units planted with yucca,UnsYucca,"CAM,CHP,TAB,VER,YUC"
+A254,Superficie sembrada de yuca en ha,Area sown with yucca in ha,ha_sem_Yucca,"CAM,CHP,TAB,VER,YUC"
+A255,Superficie cosechada de yuca en ha,Harvested yucca area in ha,ha_cos_Yucca,"CAM,CHP,TAB,VER,YUC"
+A256,Producción obtenida de yuca en ton,Production obtained from yucca in ton,q_Yucca,"CAM,CHP,TAB,VER,YUC"
+A257,Unidades de producción rural sembrada con zanahoria,Rural production units planted with carrot,UnsCarrot,"AGS,GUA,MEX,NLE,PUE,QUE,ZAC"
+A258,Superficie sembrada de zanahoria en ha,Area sown with carrot in ha,ha_sem_Carrot,"AGS,GUA,MEX,NLE,PUE,QUE,ZAC"
+A259,Superficie cosechada de zanahoria en ha,Harvested carrot area in ha,ha_cos_Carrot,"AGS,GUA,MEX,NLE,PUE,QUE,ZAC"
+A260,Producción obtenida de zanahoria en ton,Production obtained from carrot in ton,q_Carrot,"AGS,GUA,MEX,NLE,PUE,QUE,ZAC"
+A261,Unidades de producción rural sembrada con zempoalxóchitl,Rural production units planted with cempoalxochitl,UnsCempoalxochitl,MOR
+A262,Superficie sembrada de zempoalxóchitl en ha,Area sown with cempoalxochitl in ha,ha_sem_Cempoalxochitl,MOR
+A263,Superficie cosechada de zempoalxóchitl en ha,Harvested cempoalxochitl area in ha,ha_cos_Cempoalxochitl,MOR
+A264,Producción obtenida de zempoalxóchitl en ton,Production obtained from cempoalxochitl in ton,q_Cempoalxochitl,MOR
+A265,Unidades de producción rural plantada con piña,Rural production units planted with pineapple,UnsPineapple,ROO
+A266,Superficie plantada de piña en ha.,Pineapple planted area in ha.,ha_sem_Pineapple,ROO
+A267,Superficie cosechada de piña en ha.,Harvested pineapple area in ha.,ha_cos_Pineapple,ROO
+A268,Producción obtenida de piña en ton.,Production obtained from pineapple in ton.,q_Pineapple,ROO
+A269,Unidades de producción rural plantada con plátano,Rural production units planted with banana,UnsBanana,"ROO,YUC"
+A270,Superficie plantada de plátano en ha.,Banana planted area in ha.,ha_sem_Banana,"ROO,YUC"
+A271,Superficie cosechada de plátano en ha.,Harvested banana area in ha.,ha_cos_Banana,"ROO,YUC"
+A272,Producción obtenida de plátano en ton.,Production obtained from banana in ton.,q_Banana,"ROO,YUC"
+A273,Unidades de producción rural plantada con sabila,Rural production units planted with sabila,UnsSabila,YUC
+A274,Superficie plantada de sabila en ha.,Sabila planted area in ha.,ha_sem_Sabila,YUC
+A275,Superficie cosechada de sabila en ha.,Harvested sabila area in ha.,ha_cos_Sabila,YUC
+A276,Producción obtenida de sabila en ton.,Production obtained from sabila in ton.,q_Sabila,YUC
+A277,Unidades de producción rural plantada con tamarindo,Rural production units planted with tamarind,UnsTamarind,"ROO,YUC"
+A278,Superficie plantada de tamarindo en ha.,Tamarind planted area in ha.,ha_sem_Tamarind,"ROO,YUC"
+A279,Superficie cosechada de tamarindo en ha.,Harvested tamarind area in ha.,ha_cos_Tamarind,"ROO,YUC"
+A280,Producción obtenida de tamarindo en ton.,Production obtained from tamarind in ton.,q_Tamarind,"ROO,YUC"
+A281,Unidades de producción rural plantada con toronja,Rural production units planted with grapefruit,UnsGrapefruit,"ROO,YUC"
+A282,Superficie plantada de toronja en ha.,Grapefruit planted area in ha.,ha_sem_Grapefruit,"ROO,YUC"
+A283,Superficie cosechada de toronja en ha.,Harvested grapefruit area in ha.,ha_cos_Grapefruit,"ROO,YUC"
+A284,Producción obtenida de toronja en ton.,Production obtained from grapefruit in ton.,q_Grapefruit,"ROO,YUC"
+P01,Unidades de producción rural plantada con achiote ,Rural production units planted with achiote,UnsAchiote,YUC
+P02,Superficie plantada de achiote en ha.,Area planted with achiote in ha.,ha_sem_Achiote,YUC
+P03,Superficie cosechada de achiote en ha.,Harvested achiote area in ha.,ha_cos_Achiote,YUC
+P04,Producción obtenida de achiote en ton.,Production obtained from achiote in ton.,q_Achiote,YUC
+P05,Unidades de producción rural plantada con aguacate ,Rural production units planted with avocado,UnsAvocado,"AGS,BCS,CAM,COA,COL,CHP,CHH,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,TAB,TAM,VER,YUC,ZAC"
+P06,Superficie plantada de aguacate en ha.,Area planted with avocado in ha.,ha_sem_Avocado,"AGS,BCS,CAM,COA,COL,CHP,CHH,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,TAB,TAM,VER,YUC,ZAC"
+P07,Superficie cosechada de aguacate en ha.,Harvested avocado area in ha.,ha_cos_Avocado,"AGS,BCS,CAM,COA,COL,CHP,CHH,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,TAB,TAM,VER,YUC,ZAC"
+P08,Producción obtenida de aguacate en ton.,Production obtained from avocado in ton.,q_Avocado,"AGS,BCS,CAM,COA,COL,CHP,CHH,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,TAB,TAM,VER,YUC,ZAC"
+P09,Unidades de producción rural plantada con alfalfa ,Rural production units planted with alfalfa,UnsAlfalfa,"AGS,BC,BCS,COA,CHH,CDMX,DUR,GUA,HDO,JAL,MEX,MIC,MOR,NLE,OAX,PUE,QUE,SLP,SIN,SON,TAM,TLA,ZAC"
+P10,Superficie plantada de alfalfa en ha.,Area planted with alfalfa in ha.,ha_sem_Alfalfa,"AGS,BC,BCS,COA,CHH,CDMX,DUR,GUA,HDO,JAL,MEX,MIC,MOR,NLE,OAX,PUE,QUE,SLP,SIN,SON,TAM,TLA,ZAC"
+P11,Superficie cosechada de alfalfa en ha.,Harvested alfalfa area in ha.,ha_cos_Alfalfa,"AGS,BC,BCS,COA,CHH,CDMX,DUR,GUA,HDO,JAL,MEX,MIC,MOR,NLE,OAX,PUE,QUE,SLP,SIN,SON,TAM,TLA,ZAC"
+P12,Producción obtenida de alfalfa en ton.,Production obtained from alfalfa in tons.,q_Alfalfa,"AGS,BC,BCS,COA,CHH,CDMX,DUR,GUA,HDO,JAL,MEX,MIC,MOR,NLE,OAX,PUE,QUE,SLP,SIN,SON,TAM,TLA,ZAC"
+P13,Unidades de producción rural plantada con almendra,Rural production units planted with almond,UnsAlmond,BC
+P14,Superficie plantada de almendra en ha.,Area planted with almond in ha.,ha_sem_Almond,BC
+P15,Superficie cosechada de almendra en ha.,Harvested almond area in ha.,ha_cos_Almond,BC
+P16,Producción obtenida de almendra en ton.,Production obtained from almond in tons.,q_Almond,BC
+P17,Unidades de producción rural plantada con cacao,Rural production units planted with cacao,UnsCacao,"CHP,GRO,TAB"
+P18,Superficie plantada de cacao en ha.,Area planted with cacao in ha.,ha_sem_Cacao,"CHP,GRO,TAB"
+P19,Superficie cosechada de cacao en ha.,Harvested cacao area in ha.,ha_cos_Cacao,"CHP,GRO,TAB"
+P20,Producción obtenida de cacao en ton.,Production obtained from cacao in ton.,q_Cacao,"CHP,GRO,TAB"
+P21,Unidades de producción rural plantada con café,Rural production units planted with coffee,UnsCoffee,"COL,CHP,GRO,HDO,JAL,MEX,MIC,MOR,NAY,OAX,PUE,SLP,TAB,VER"
+P22,Superficie plantada de café en ha.,Area planted with coffee in ha.,ha_sem_Coffee,"COL,CHP,GRO,HDO,JAL,MEX,MIC,MOR,NAY,OAX,PUE,SLP,TAB,VER"
+P23,Superficie cosechada de café en ha.,Harvested coffee area in ha.,ha_cos_Coffee,"COL,CHP,GRO,HDO,JAL,MEX,MIC,MOR,NAY,OAX,PUE,SLP,TAB,VER"
+P24,Producción obtenida de café en ton.,Production obtained from coffee in ton.,q_Coffee,"COL,CHP,GRO,HDO,JAL,MEX,MIC,MOR,NAY,OAX,PUE,SLP,TAB,VER"
+P25,Unidades de producción r. plantada con caña de azúcar ,Production units r. planted with sugar cane,UnsSugarCane,"CAM,COL,CHP,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,ROO,SLP,SIN,TAB,TAM,VER"
+P26,Superficie plan. de caña de azúcar en ha.,Plan surface. of sugar cane in ha.,ha_sem_SugarCane,"CAM,COL,CHP,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,ROO,SLP,SIN,TAB,TAM,VER"
+P27,Superficie cose. de caña de azúcar en ha.,Sew surface. of sugar cane in ha.,ha_cos_SugarCane,"CAM,COL,CHP,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,ROO,SLP,SIN,TAB,TAM,VER"
+P28,Producción obtenida de caña de azúcar  en ton.,Production obtained from sugar cane in tons.,q_SugarCane,"CAM,COL,CHP,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,ROO,SLP,SIN,TAB,TAM,VER"
+P29,Unidades de producción rural plantada con capulín,Rural production units planted with capulín,UnsCapulin,CDMX
+P30,Superficie plantada de capulín en ha.,Area planted with capulín in ha.,ha_sem_Capulin,CDMX
+P31,Superficie cosechada de capulín en ha.,Harvested capulín area in ha.,ha_cos_Capulin,CDMX
+P32,Producción obtenida de capulín en ton.,Production obtained from capulín in ton.,q_Capulin,CDMX
+P33,Unidades de producción rural plantada con chabacano,Rural production units planted with apricot,UnsApricot,"AGS,COA,CHH,CDMX,NLE,SON,ZAC"
+P34,Superficie plantada de chabacano en ha.,Area planted with apricot in ha.,ha_sem_Apricot,"AGS,COA,CHH,CDMX,NLE,SON,ZAC"
+P35,Superficie cosechada de chabacano en ha.,Harvested apricot area in ha.,ha_cos_Apricot,"AGS,COA,CHH,CDMX,NLE,SON,ZAC"
+P36,Producción obtenida de chabacano en ton.,Production obtained from apricot in ton.,q_Apricot,"AGS,COA,CHH,CDMX,NLE,SON,ZAC"
+P37,Unidades de producción rural plantada con chicozapote,Rural production units planted with sapodilla,UnsSapodilla,"CAM,MOR,ROO"
+P38,Superficie plantada de chicozapote en ha.,Sapodilla planted area in ha.,ha_sem_Sapodilla,"CAM,MOR,ROO"
+P39,Superficie cosechada de chicozapote en ha.,Harvested sapodilla area in ha.,ha_cos_Sapodilla,"CAM,MOR,ROO"
+P40,Producción obtenida de chicozapote en ton.,Production obtained from sapodilla in ton.,q_Sapodilla,"CAM,MOR,ROO"
+P41,Unidades de producción rural plantada con ciruela,Rural production units planted with plums,UnsPlums,"AGS,BCS,COA,COL,CHP,CHH,CDMX,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,PUE,ROO,SIN,SON,VER,YUC,ZAC"
+P42,Superficie plantada de ciruela en ha.,Plum planted area in ha.,ha_sem_Plums,"AGS,BCS,COA,COL,CHP,CHH,CDMX,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,PUE,ROO,SIN,SON,VER,YUC,ZAC"
+P43,Superficie cosechada de ciruela en ha.,Harvested plum area in ha.,ha_cos_Plums,"AGS,BCS,COA,COL,CHP,CHH,CDMX,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,PUE,ROO,SIN,SON,VER,YUC,ZAC"
+P44,Producción obtenida de ciruela en ton.,Production obtained from plums in ton.,q_Plums,"AGS,BCS,COA,COL,CHP,CHH,CDMX,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,PUE,ROO,SIN,SON,VER,YUC,ZAC"
+P45,Unidades de producción rural plantada con coco,Rural production units planted with coconut,UnsCoconut,"BCS,CAM,COL,CHP,GRO,JAL,NAY,OAX,PUE,ROO,SIN,TAB,VER,YUC"
+P46,Superficie plantada de coco en ha.,Coconut planted area in ha.,ha_sem_Coconut,"BCS,CAM,COL,CHP,GRO,JAL,NAY,OAX,PUE,ROO,SIN,TAB,VER,YUC"
+P47,Superficie cosechada de coco en ha.,Harvested coconut area in ha.,ha_cos_Coconut,"BCS,CAM,COL,CHP,GRO,JAL,NAY,OAX,PUE,ROO,SIN,TAB,VER,YUC"
+P48,Producción obtenida de coco en ton.,Production obtained from coconut in ton.,q_Coconut,"BCS,CAM,COL,CHP,GRO,JAL,NAY,OAX,PUE,ROO,SIN,TAB,VER,YUC"
+P49,Unidades de producción r. plantada con dátil,Production units r. planted with date,UnsDate,"BC,BCS,COA,SON"
+P50,Superficie plantada de dátil en ha.,Area planted with date in ha.,ha_sem_Date,"BC,BCS,COA,SON"
+P51,Superficie cosechada de dátil en ha.,Harvested date area in ha.,ha_cos_Date,"BC,BCS,COA,SON"
+P52,P. obtenida de dátil en ton,P. obtained from date in ton,q_Date,"BC,BCS,COA,SON"
+P53,Unidades de producción r. plantada con durazno,Production units r. planted with peach,UnsPeach,"AGS,BCS,COA,CHH,CDMX,DUR,GUA,GRO,HDO,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,SIN,SON,TAM,TLA,VER,ZAC"
+P54,Superficie plantada de durazno en ha.,Area planted with peach in ha.,ha_sem_Peach,"AGS,BCS,COA,CHH,CDMX,DUR,GUA,GRO,HDO,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,SIN,SON,TAM,TLA,VER,ZAC"
+P55,Superficie cosechada de durazno en ha.,Harvested peach area in ha.,ha_cos_Peach,"AGS,BCS,COA,CHH,CDMX,DUR,GUA,GRO,HDO,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,SIN,SON,TAM,TLA,VER,ZAC"
+P56,P. obtenida de durazno en ton,P. obtained from peach in ton,q_Peach,"AGS,BCS,COA,CHH,CDMX,DUR,GUA,GRO,HDO,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,SIN,SON,TAM,TLA,VER,ZAC"
+P57,Unidades de producción r. plantada con espárragos,Production units r. planted with asparagus,UnsAsparagus,"BC,BCS,COA,GUA,QUE,SON"
+P58,Superficie plantada de espárragos en ha.,Area planted with asparagus in ha.,ha_sem_Asparagus,"BC,BCS,COA,GUA,QUE,SON"
+P59,Superficie cosechada de espárragos en ha.,Harvested asparagus area in ha.,ha_cos_Asparagus,"BC,BCS,COA,GUA,QUE,SON"
+P60,P. obtenida de espárragos en ton,P. obtained from asparagus in ton,q_Asparagus,"BC,BCS,COA,GUA,QUE,SON"
+P61,Unidades de producción r. plantada con fresa,Production units r. planted with strawberry,UnsStrawberry,GUA
+P62,Superficie plantada de fresa en ha.,Area planted with strawberry in ha.,ha_sem_Strawberry,GUA
+P63,Superficie cosechada de fresa en ha.,Harvested strawberry area in ha.,ha_cos_Strawberry,GUA
+P64,P. obtenida de fresa en ton,P. obtained from strawberry in ton,q_Strawberry,GUA
+P65,Unidades de producción r. plantada con granada,Production units r. planted with strawberry,UnsPomegranate,"AGS,COA,GUA"
+P66,Superficie plantada de granada en ha.,Area planted with pomegranate in ha.,ha_sem_Pomegranate,"AGS,COA,GUA"
+P67,Superficie cosechada de granada en ha.,Harvested pomegranate area in ha.,ha_cos_Pomegranate,"AGS,COA,GUA"
+P68,P. obtenida de granada en ton,P. obtained from pomegranate in ton,q_Pomegranate,"AGS,COA,GUA"
+P69,Unidades de producción rural plantada con guanabana,Rural production units planted with soursop,UnsSoursop,"CAM,COL,CHP,NAY,ROO,YUC"
+P70,Superficie plantada de guanabana en ha.,Area planted with soursop in ha.,ha_sem_Soursop,"CAM,COL,CHP,NAY,ROO,YUC"
+P71,Superficie cosechada de guanabana en ha.,Soursop harvested area in ha.,ha_cos_Soursop,"CAM,COL,CHP,NAY,ROO,YUC"
+P72,Producción obtenida de guanabana en ton.,Production obtained from soursop in tons.,q_Soursop,"CAM,COL,CHP,NAY,ROO,YUC"
+P73,Unidades de producción rural plantada con guayaba,Rural production units planted with guava,UnsGuava,"AGS,BCS,CAM,GUA,JAL,MEX,MIC,MOR,QUE,ROO,YUC,ZAC"
+P74,Superficie plantada de guayaba en ha.,Area planted with guava in ha.,ha_sem_Guava,"AGS,BCS,CAM,GUA,JAL,MEX,MIC,MOR,QUE,ROO,YUC,ZAC"
+P75,Superficie cosechada de guayaba en ha.,Guava harvested area in ha.,ha_cos_Guava,"AGS,BCS,CAM,GUA,JAL,MEX,MIC,MOR,QUE,ROO,YUC,ZAC"
+P76,Producción obtenida de guayaba en ton.,Production obtained from guava in tons.,q_Guava,"AGS,BCS,CAM,GUA,JAL,MEX,MIC,MOR,QUE,ROO,YUC,ZAC"
+P77,Unidades de producción rural plantada con henequen,Rural production units planted with henequen,UnsHenequen,"TAM,YUC"
+P78,Superficie plantada de henequen en ha.,Area planted with henequen in ha.,ha_sem_Henequen,"TAM,YUC"
+P79,Superficie cosechada de henequen en ha.,Harvested henequen in ha.,ha_cos_Henequen,"TAM,YUC"
+P80,Producción obtenida de henequen en ton.,Production obtained from henequen in ton.,q_Henequen,"TAM,YUC"
+P81,Unidades de producción rural plantada con hierbabuena,Rural production units planted with hierbabuena,UnsHierbabuena,TLA
+P82,Superficie plantada de hierbabuena en ha.,Area planted with hierbabuena in ha.,ha_sem_Hierbabuena,TLA
+P83,Superficie cosechada de hierbabuena en ha.,Harvested hierbabuena in ha.,ha_cos_Hierbabuena,TLA
+P84,Producción obtenida de hierbabuena en ton.,Production obtained from hierbabuena in ton.,q_Hierbabuena,TLA
+P85,Unidades de producción rural plantada con higo,Rural production units planted with figs,UnsFigs,"BCS,CDMX,MOR,SON"
+P86,Superficie plantada de higo en ha.,Area planted with figs in ha.,ha_sem_Figs,"BCS,CDMX,MOR,SON"
+P87,Superficie cosechada de higo en ha.,Harvested figs in ha.,ha_cos_Figs,"BCS,CDMX,MOR,SON"
+P88,Producción obtenida de higo en ton.,Production obtained from figs in ton.,q_Figs,"BCS,CDMX,MOR,SON"
+P89,Unidades de producción rural plantada con hule,Rural production units planted with rubber,UnsRubber,"OAX,TAB,VER"
+P90,Superficie plantada de hule en ha.,Area planted with rubber in ha.,ha_sem_Rubber,"OAX,TAB,VER"
+P91,Superficie cosechada de hule en ha.,Harvested rubber surface in ha.,ha_cos_Rubber,"OAX,TAB,VER"
+P92,Producción obtenida de hule en ton.,Production obtained from rubber in ton.,q_Rubber,"OAX,TAB,VER"
+P93,Unidades de producción rural plantada con ílamo,Rural production units planted with poplar,UnsPoplar,CHP
+P94,Superficie plantada de ílamo en ha.,Area planted with poplar in ha.,ha_sem_Poplar,CHP
+P95,Superficie cosechada de ílamo en ha.,Harvested poplar surface in ha.,ha_cos_Poplar,CHP
+P96,Producción obtenida de ílamo en ton.,Production obtained from poplar in ton.,q_Poplar,CHP
+P97,Unidades de producción rural plantada con jojoba,Rural production units planted with jojoba,UnsJojoba,SON
+P98,Superficie plantada de jojoba en ha.,Area planted with jojoba in ha.,ha_sem_Jojoba,SON
+P99,Superficie cosechada de jojoba en ha.,Harvested jojoba surface in ha.,ha_cos_Jojoba,SON
+P100,Producción obtenida de jojoba en ton.,Production obtained from jojoba in ton.,q_Jojoba,SON
+P101,Unidades de producción rural plantada con lima,Rural production units planted with lime,UnsLime,JAL
+P102,Superficie plantada de lima en ha.,Area planted with lime in ha.,ha_sem_Lime,JAL
+P103,Superficie cosechada de lima en ha.,Harvested lime surface in ha.,ha_cos_Lime,JAL
+P104,Producción obtenida de lima en ton.,Production obtained from lime in ton.,q_Lime,JAL
+P105,Unidades de producción rural plantada con limón,Rural production units planted with lemon,UnsLemon,"AGS,BC,CAM,COL,CHP,CHH,GRO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,TAB,TAM,VER,YUC"
+P106,Superficie plantada de limón en ha.,Area planted with lemon in ha.,ha_sem_Lemon,"AGS,BC,CAM,COL,CHP,CHH,GRO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,TAB,TAM,VER,YUC"
+P107,Superficie cosechada de limón en ha.,Harvested lemon surface in ha.,ha_cos_Lemon,"AGS,BC,CAM,COL,CHP,CHH,GRO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,TAB,TAM,VER,YUC"
+P108,Producción obtenida de limón en ton.,Production obtained from lemon in ton.,q_Lemon,"AGS,BC,CAM,COL,CHP,CHH,GRO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,TAB,TAM,VER,YUC"
+P109,Unidades de producción rural plantada con litchi,Rural production units planted with lychee,UnsLychee,SIN
+P110,Superficie plantada de litchi en ha.,Area planted with lychee in ha.,ha_sem_Lychee,SIN
+P111,Superficie cosechada de litchi en ha.,Harvested lychee surface in ha.,ha_cos_Lychee,SIN
+P112,Producción obtenida de litchi en ton.,Production obtained from lychee in ton.,q_Lychee,SIN
+P113,Unidades de producción rural plantada con magueyes,Rural production units planted with magueyes,UnsMagueyes,"COL,CDMX,DUR,HDO,JAL,MEX,MIC,OAX,PUE,QUE,TLA,ZAC"
+P114,Superficie plantada de magueyes en ha.,Area planted with magueyes in ha.,ha_sem_Magueyes,"COL,CDMX,DUR,HDO,JAL,MEX,MIC,OAX,PUE,QUE,TLA,ZAC"
+P115,Superficie cosechada de magueyes en ha.,Harvested area of maguey trees in ha.,ha_cos_Magueyes,"COL,CDMX,DUR,HDO,JAL,MEX,MIC,OAX,PUE,QUE,TLA,ZAC"
+P116,Producción obtenida de magueyes en ton.,Production obtained from magueyes in ton.,q_Magueyes,"COL,CDMX,DUR,HDO,JAL,MEX,MIC,OAX,PUE,QUE,TLA,ZAC"
+P117,Unidades de producción r. plantada con mamey,Production units r. planted with mamey,UnsMamey,"GRO,ROO,YUC"
+P118,Superficie plantada de mamey en ha,Area planted with mamey in ha,ha_sem_Mamey,"GRO,ROO,YUC"
+P119,Superficie cosechada de mamey en ha,Harvested mamey area in ha,ha_cos_Mamey,"GRO,ROO,YUC"
+P120,P. obtenida de mamey en ton,P. obtained from mamey in ton,q_Mamey,"GRO,ROO,YUC"
+P121,Unidades de producción r. plantada con mandarina,Production units r. planted with mandarin,UnsMandarin,"BC,CAM,CHP,NLE,ROO,SLP,TAM,YUC"
+P122,Superficie plantada de mandarina en ha,Area planted with mandarin in ha,ha_sem_Mandarin,"BC,CAM,CHP,NLE,ROO,SLP,TAM,YUC"
+P123,Superficie cosechada de mandarina en ha,Harvested mandarin area in ha,ha_cos_Mandarin,"BC,CAM,CHP,NLE,ROO,SLP,TAM,YUC"
+P124,P. obtenida de mandarina en ton,P. obtained from mandarin in ton,q_Mandarin,"BC,CAM,CHP,NLE,ROO,SLP,TAM,YUC"
+P125,Unidades de producción r. plantada con mango,Production units r. planted with mango,UnsMango,"BCS,CAM,COL,CHP,CHH,DUR,GRO,HDO,JAL,MEX,MIC,MOR,NAY,OAX,QUE,ROO,SLP,SIN,TAB,TAM,VER,YUC"
+P126,Superficie plantada de mango en ha,Area planted with mango in ha,ha_sem_Mango,"BCS,CAM,COL,CHP,CHH,DUR,GRO,HDO,JAL,MEX,MIC,MOR,NAY,OAX,QUE,ROO,SLP,SIN,TAB,TAM,VER,YUC"
+P127,Superficie cosechada de mango en ha,Harvested mango area in ha,ha_cos_Mango,"BCS,CAM,COL,CHP,CHH,DUR,GRO,HDO,JAL,MEX,MIC,MOR,NAY,OAX,QUE,ROO,SLP,SIN,TAB,TAM,VER,YUC"
+P128,P. obtenida de mango en ton,P. obtained from mango in ton,q_Mango,"BCS,CAM,COL,CHP,CHH,DUR,GRO,HDO,JAL,MEX,MIC,MOR,NAY,OAX,QUE,ROO,SLP,SIN,TAB,TAM,VER,YUC"
+P129,Unidades de producción rural plantada con manzana,Rural production units planted with apples,UnsApple,"AGS,BC,BCS,COA,CHH,CDMX,DUR,GUA,HDO,MEX,MIC,NLE,PUE,QUE,SIN,SON,ZAC"
+P130,Superficie plantada de manzana en ha.,Apple planted area in ha.,ha_sem_Apple,"AGS,BC,BCS,COA,CHH,CDMX,DUR,GUA,HDO,MEX,MIC,NLE,PUE,QUE,SIN,SON,ZAC"
+P131,Superficie cosechada de manzana en ha.,Harvested apple area in ha.,ha_cos_Apple,"AGS,BC,BCS,COA,CHH,CDMX,DUR,GUA,HDO,MEX,MIC,NLE,PUE,QUE,SIN,SON,ZAC"
+P132,Producción obtenida de manzana en ton.,Production obtained from apples in tons.,q_Apple,"AGS,BC,BCS,COA,CHH,CDMX,DUR,GUA,HDO,MEX,MIC,NLE,PUE,QUE,SIN,SON,ZAC"
+P133,Unidades de producción rural plantada con marañón,Rural production units planted with cashew,UnsCashew,CAM
+P134,Superficie plantada de marañón en ha.,Cashew planted area in ha.,ha_sem_Cashew,CAM
+P135,Superficie cosechada de marañón en ha.,Harvested cashew area in ha.,ha_cos_Cashew,CAM
+P136,Producción obtenida de marañón en ton.,Production obtained from cashew in tons.,q_Cashew,CAM
+P137,Unidades de producción rural plantada con membrillo,Rural production units planted with quince,UnsQuince,"AGS,COA,CHH,DUR,CDMX,GUA,SON,ZAC"
+P138,Superficie plantada de membrillo en ha.,Quince planted area in ha.,ha_sem_Quince,"AGS,COA,CHH,DUR,CDMX,GUA,SON,ZAC"
+P139,Superficie cosechada de membrillo en ha.,Harvested quince area in ha.,ha_cos_Quince,"AGS,COA,CHH,DUR,CDMX,GUA,SON,ZAC"
+P140,Producción obtenida de membrillo en ton.,Production obtained from quince in tons.,q_Quince,"AGS,COA,CHH,DUR,CDMX,GUA,SON,ZAC"
+P141,Unidades de producción rural plantada con nanche,Rural production units planted with nanche,UnsNanche,"CAM,GRO,NAY,ROO,YUC"
+P142,Superficie plantada de nanche en ha.,Area planted with nanche in ha.,ha_sem_Nanche,"CAM,GRO,NAY,ROO,YUC"
+P143,Superficie cosechada de nanche en ha.,Harvested area of nanche in ha.,ha_cos_Nanche,"CAM,GRO,NAY,ROO,YUC"
+P144,Producción obte. de nanche en ton.,Obtained production of nanche in ton.,q_Nanche,"CAM,GRO,NAY,ROO,YUC"
+P145,Unidades de producción rural plantada con naranja,Rural production units planted with orange,UnsOrange,"BC,BCS,CAM,COL,CHP,CHH,DUR,HDO,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,VER,YUC"
+P146,Superficie plantada de naranja en ha.,Area planted with orange in ha.,ha_sem_Orange,"BC,BCS,CAM,COL,CHP,CHH,DUR,HDO,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,VER,YUC"
+P147,Superficie cosechada de naranja en ha.,Harvested area of orange in ha.,ha_cos_Orange,"BC,BCS,CAM,COL,CHP,CHH,DUR,HDO,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,VER,YUC"
+P148,Producción obte. de naranja en ton.,Obtained production of orange in ton.,q_Orange,"BC,BCS,CAM,COL,CHP,CHH,DUR,HDO,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,VER,YUC"
+P149,Unidades de producción rural plantada con nopal,Rural production units planted with cactus,UnsCactus,"AGS,BC,COL,CDMX,DUR,GUA,HDO,JAL,MOR,QUE,SLP,TAM,TLA"
+P150,Superficie plantada de nopal en ha.,Area planted with cactus in ha.,ha_sem_Cactus,"AGS,BC,COL,CDMX,DUR,GUA,HDO,JAL,MOR,QUE,SLP,TAM,TLA"
+P151,Superficie cosechada de nopal en ha.,Harvested area of cactus in ha.,ha_cos_Cactus,"AGS,BC,COL,CDMX,DUR,GUA,HDO,JAL,MOR,QUE,SLP,TAM,TLA"
+P152,Producción obte. de nopal en ton.,Obtained production of cactus in ton.,q_Cactus,"AGS,BC,COL,CDMX,DUR,GUA,HDO,JAL,MOR,QUE,SLP,TAM,TLA"
+P153,Unidades de producción rural plantada con nopal tunero ,Rural production units planted with prickly pear,UnsCactusPear,"AGS,COA,GUA,MEX,MIC,QUE,SLP,ZAC"
+P154,Superficie plantada de nopal tunero en ha.,Area planted with prickly pear cactus in ha.,ha_sem_CactusPear,"AGS,COA,GUA,MEX,MIC,QUE,SLP,ZAC"
+P155,Superficie cosechada de nopal tunero en ha.,Harvested area of prickly pear cactus in ha.,ha_cos_CactusPear,"AGS,COA,GUA,MEX,MIC,QUE,SLP,ZAC"
+P156,Producción obte. de nopal tunero en ton.,Obtained production of prickly pear cactus in ton.,q_CactusPear,"AGS,COA,GUA,MEX,MIC,QUE,SLP,ZAC"
+P157,Unidades producción r. plan. con nuez encarcelada,Production units r. plan. with walnut,UnsWalnut,"AGS,BC,COA,CHH,CDMX,DUR,GUA,HDO,MEX,MIC,NLE,SLP,SON,ZAC"
+P158,Superficie plantada de nuez encarcelada  en ha.,Area planted with walnut in ha.,ha_sem_Walnut,"AGS,BC,COA,CHH,CDMX,DUR,GUA,HDO,MEX,MIC,NLE,SLP,SON,ZAC"
+P159,Superficie cosechada de nuez encarcelada  en ha.,Harvested area of walnut in ha.,ha_cos_Walnut,"AGS,BC,COA,CHH,CDMX,DUR,GUA,HDO,MEX,MIC,NLE,SLP,SON,ZAC"
+P160,P. obtenida de nuez encarcelada  en ton.,P. obtained from walnut in ton.,q_Walnut,"AGS,BC,COA,CHH,CDMX,DUR,GUA,HDO,MEX,MIC,NLE,SLP,SON,ZAC"
+P161,Unidades producción r. plantada de olivo,Production units r. planted with olive,UnsOlive,"BC,SON"
+P162,Superficie plantada de olivo en ha.,Area planted with olive in ha.,ha_sem_Olive,"BC,SON"
+P163,Superficie cosechada de olivo en ha.,Harvested area of olive in ha.,ha_cos_Olive,"BC,SON"
+P164,P. obtenida de olivo en ton.,P. obtained from olives in ton.,q_Olive,"BC,SON"
+P165,Unidades producción r. plantada con papaya,Production units r. planted with papaya,UnsPapaya,"BCS,COL,GRO,JAL,MOR,NAY,OAX,ROO,SLP,SIN,TAB,TAM,VER,YUC"
+P166,Superficie plantada de papaya en ha.,Area planted with papaya in ha.,ha_sem_Papaya,"BCS,COL,GRO,JAL,MOR,NAY,OAX,ROO,SLP,SIN,TAB,TAM,VER,YUC"
+P167,Superficie cosechada de papaya en ha.,Harvested area of papaya in ha.,ha_cos_Papaya,"BCS,COL,GRO,JAL,MOR,NAY,OAX,ROO,SLP,SIN,TAB,TAM,VER,YUC"
+P168,P. obtenida de papaya en ton.,P. obtained from papaya in ton.,q_Papaya,"BCS,COL,GRO,JAL,MOR,NAY,OAX,ROO,SLP,SIN,TAB,TAM,VER,YUC"
+P169,Unidades producción r. plantada con pastos cultivados ,Production units r. planted with cultivated grasses,UnsCultivatedGrasses,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+P170,Superficie plantada de pastos cultivados  en ha.,Area planted with cultivated grasses in ha.,ha_sem_CultivatedGrasses,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+P171,Superficie cosechada de pastos cultivados  en ha.,Harvested area of cultivated pastures in ha.,ha_cos_CultivatedGrasses,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+P172,P. obtenida de pastos cultivados  en ton.,P. obtained from grasses grown in ton.,q_CultivatedGrasses,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+P173,Unidades de producción rural plantada con pera,Rural production units planted with pear,UnsPear,"COA,CHH,CDMX,DUR,GUA,MEX,MIC,MOR,NLE,PUE,QUE,TLA,ZAC"
+P174,Superficie plantada de pera en ha.,Pear planted area in ha.,ha_sem_Pear,"COA,CHH,CDMX,DUR,GUA,MEX,MIC,MOR,NLE,PUE,QUE,TLA,ZAC"
+P175,Superficie cosechada de pera en ha.,Harvested pear area in ha.,ha_cos_Pear,"COA,CHH,CDMX,DUR,GUA,MEX,MIC,MOR,NLE,PUE,QUE,TLA,ZAC"
+P176,Producción obtenida de pera en ton.,Production obtained from pear in ton.,q_Pear,"COA,CHH,CDMX,DUR,GUA,MEX,MIC,MOR,NLE,PUE,QUE,TLA,ZAC"
+P177,Unidades de producción rural plantada con perón,Rural production units planted with perón,UnsPeron,"DUR,ZAC"
+P178,Superficie plantada de perón en ha.,Perón planted area in ha.,ha_sem_Peron,"DUR,ZAC"
+P179,Superficie cosechada de perón en ha.,Harvested perón area in ha.,ha_cos_Peron,"DUR,ZAC"
+P180,Producción obtenida de perón en ton.,Production obtained from perón in ton.,q_Peron,"DUR,ZAC"
+P181,Unidades de producción rural plantada con pimienta,Rural production units planted with pepper,UnsPepper,TAB
+P182,Superficie plantada de pimienta en ha.,Pepper planted area in ha.,ha_sem_Pepper,TAB
+P183,Superficie cosechada de pimienta en ha.,Harvested pepper area in ha.,ha_cos_Pepper,TAB
+P184,Producción obtenida de pimienta en ton.,Production obtained from pepper in ton.,q_Pepper,TAB
+P185,Unidades de producción rural plantada con piña,Rural production units planted with pineapple,UnsPineapple,"NAY,OAX,TAB,VER"
+P186,Superficie plantada de piña en ha.,Pineapple planted area in ha.,ha_sem_Pineapple,"NAY,OAX,TAB,VER"
+P187,Superficie cosechada de piña en ha.,Harvested pineapple area in ha.,ha_cos_Pineapple,"NAY,OAX,TAB,VER"
+P188,Producción obtenida de piña en ton.,Production obtained from pineapple in ton.,q_Pineapple,"NAY,OAX,TAB,VER"
+P189,Unidades de producción rural plantada con pistache,Rural production units planted with pistachio,UnsPistachio,"BC,CHH"
+P190,Superficie plantada con pistache en ha.,Pistachio planted area in ha.,ha_sem_Pistachio,"BC,CHH"
+P191,Superficie cosechada con pistache en ha.,Harvested pistachio area in ha.,ha_cos_Pistachio,"BC,CHH"
+P192,Producción obtenida con pistache en ton.,Production obtained from pistachio in ton.,q_Pistachio,"BC,CHH"
+P193,Unidades de producción rural plantada con plátano,Rural production units planted with banana,UnsBanana,"CAM,COL,CHP,DUR,GRO,HDO,JAL,NAY,OAX,PUE,TAB,TAM,VER"
+P194,Superficie plantada de plátano en ha.,Banana planted area in ha.,ha_sem_Banana,"CAM,COL,CHP,DUR,GRO,HDO,JAL,NAY,OAX,PUE,TAB,TAM,VER"
+P195,Superficie cosechada de plátano en ha.,Harvested banana area in ha.,ha_cos_Banana,"CAM,COL,CHP,DUR,GRO,HDO,JAL,NAY,OAX,PUE,TAB,TAM,VER"
+P196,Producción obtenida de plátano en ton.,Production obtained from banana in ton.,q_Banana,"CAM,COL,CHP,DUR,GRO,HDO,JAL,NAY,OAX,PUE,TAB,TAM,VER"
+P197,Unidades de producción rural plantada con rosa,Rural production units planted with rose,UnsRose,MOR
+P198,Superficie plantada de rosa en ha.,Rose planted area in ha.,ha_sem_Rose,MOR
+P199,Superficie cosechada de rosa en ha.,Harvested rose area in ha.,ha_cos_Rose,MOR
+P200,Producción obtenida de rosa en ton.,Production obtained from rose in ton.,q_Rose,MOR
+P201,Unidades de producción rural plantada con sabila,Rural production units planted with sabila,UnsSabila,TAM
+P202,Superficie plantada de sabila en ha.,Sabila planted area in ha.,ha_sem_Sabila,TAM
+P203,Superficie cosechada de sabila en ha.,Harvested sabila area in ha.,ha_cos_Sabila,TAM
+P204,Producción obtenida de sabila en ton.,Production obtained from sabila in ton.,q_Sabila,TAM
+P205,Unidades de producción rural plantada con tamarindo,Rural production units planted with tamarind,UnsTamarind,"CAM,COL,CHP,GRO,NAY,SIN"
+P206,Superficie plantada de tamarindo en ha.,Tamarind planted area in ha.,ha_sem_Tamarind,"CAM,COL,CHP,GRO,NAY,SIN"
+P207,Superficie cosechada de tamarindo en ha.,Harvested tamarind area in ha.,ha_cos_Tamarind,"CAM,COL,CHP,GRO,NAY,SIN"
+P208,Producción obtenida de tamarindo en ton.,Production obtained from tamarind in ton.,q_Tamarind,"CAM,COL,CHP,GRO,NAY,SIN"
+P209,Unidades de producción rural plantada con tejocote,Rural production units planted with hawthorne,UnsHawthorne,"CDMX,PUE"
+P210,Superficie plantada de tejocote en ha.,Hawthorne planted area in ha.,ha_sem_Hawthorne,"CDMX,PUE"
+P211,Superficie cosechada de tejocote en ha.,Harvested hawthorne area in ha.,ha_cos_Hawthorne,"CDMX,PUE"
+P212,Producción obtenida de tejocote en ton.,Production obtained from hawthorne in ton.,q_Hawthorne,"CDMX,PUE"
+P213,Unidades de producción rural plantada con toronja,Ru	ral production units planted with grapefruit,UnsGrapefruit,"BC,NLE,SLP,SIN,TAB,TAM,VER"
+P214,Superficie plantada de toronja en ha.,Grapefruit planted area in ha.,ha_sem_Grapefruit,"BC,NLE,SLP,SIN,TAB,TAM,VER"
+P215,Superficie cosechada de toronja en ha.,Harvested grapefruit area in ha.,ha_cos_Grapefruit,"BC,NLE,SLP,SIN,TAB,TAM,VER"
+P216,Producción obtenida de toronja en ton.,Production obtained from grapefruit in ton.,q_Grapefruit,"BC,NLE,SLP,SIN,TAB,TAM,VER"
+P217,Unidades de producción rural plantada con trebol,Rural production units planted with clover,UnsClover,HDO
+P218,Superficie plantada de trebol en ha.,Clover planted area in ha.,ha_sem_Clover,HDO
+P219,Superficie cosechada de trebol en ha.,Harvested clover area in ha.,ha_cos_Clover,HDO
+P220,Producción obtenida de trebol en ton.,Production obtained from clover in ton.,q_Clover,HDO
+P221,Unidades de producción rural plantada con uva,Rural production units planted with grape,UnsGrape,"AGS,BC,BCS,COA,CHH,DUR,GUA,NLE,QUE,SLP,SON,ZAC"
+P222,Superficie plantada de uva en ha.,Grape planted area in ha.,ha_sem_Grape,"AGS,BC,BCS,COA,CHH,DUR,GUA,NLE,QUE,SLP,SON,ZAC"
+P223,Superficie cosechada de uva en ha.,Harvested grape area in ha.,ha_cos_Grape,"AGS,BC,BCS,COA,CHH,DUR,GUA,NLE,QUE,SLP,SON,ZAC"
+P224,Producción obtenida de uva en ton.,Production obtained from grape in ton.,q_Grape,"AGS,BC,BCS,COA,CHH,DUR,GUA,NLE,QUE,SLP,SON,ZAC"
+P225,Unidades de producción rural plantada con zarzamora,Rural production units planted with blackberry,UnsBlackberry,CDMX
+P226,Superficie plantada de zarzamora en ha.,Blackberry planted area in ha.,ha_sem_Blackberry,CDMX
+P227,Superficie cosechada de zarzamora en ha.,Harvested blackberry area in ha.,ha_cos_Blackberry,CDMX
+P228,Producción obtenida de zarzamora en ton.,Production obtained from blackberry in ton.,q_Blackberry,CDMX
+P229,Volumen cortado de pino en m3gríc. en ton.,Pine cut volume in m3gríc. in ton,PineVolCut,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+P230,Volumen cortado de encino en m3íc. en ton.,Volume cut from oak in m3ic. in ton,OakVolCut,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+P231,Volumen cortado de oyamel en m3íc. en ton.,Cut volume of oyamel in m3ic. in ton,OyamelVolCut,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+P232,Volumen obtenido de otras especies en m3 en ton.,Volume obtained from other species in m3 in tons.,OtherSpeciesVol,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+P233,Unidades de producción rural que usan tecnología forestal,Rural production units that use forestry technology,UnsForestryTech,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+P234,Unidades de producción rural que recolectan productos forestales,Rural production units that collect forest products,UnsForestProducts,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
+P235,Unidades de producción rural usan equipo e instalaciones forestales,Rural production units use forestry equipment and facilities,UnsForestryEquip,"AGS,BC,BCS,CAM,COA,COL,CHP,CHH,CDMX,DUR,GUA,GRO,HDO,JAL,MEX,MIC,MOR,NAY,NLE,OAX,PUE,QUE,ROO,SLP,SIN,SON,TAB,TAM,TLA,VER,YUC,ZAC"
