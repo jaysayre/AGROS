@@ -1,5 +1,9 @@
 # AGROS
-.exes for both discs of the AGROS programs containing information at the AGEB level for the Mexican 1991 Agricultural Census with usage instructions/.exes de ambos discos de los programas AGROS que contienen información a nivel AGEB del Censo Agrícola-Ganadero de México de 1991, junto con las instrucciones de uso.  9701310829 (D1) &amp; 9701311337 (D2)
+.exes for both discs of the AGROS programs containing information at the AGEB level for the Mexican 1991 Agricultural Census with usage instructions.
+
+.exes de ambos discos de los programas AGROS que contienen información a nivel AGEB del Censo Agrícola-Ganadero de México de 1991, junto con las instrucciones de uso.  9701310829 (D1) &amp; 9701311337 (D2)
+
+# Instructions (para instrucciones en español ver abajo):
 
 1. Install DOSBox
 The first step is to install a version of DOSBox (available at: https://www.dosbox.com/
@@ -60,40 +64,61 @@ The list of states and their codes is as follows:
 
 The .SDF files do not include variable names, but these can be found in the files VARS.SCA and VARS.SCE inside the folders corresponding to each state. The order of the variables varies depending on the state.
 
-Instrucciones necesarias para abrir y acceder a la información contenida en los discos de AGROS:
+# Instrucciones necesarias para abrir y acceder a la información contenida en los discos de AGROS:
+
     1. Instalación de DOSBox
 El primer paso es instalar una versión de DOSBox (disponible en: https://www.dosbox.com/), un emulador de DOS usado principalmente para ejecutar videojuegos de esa epoca.
+
     2. Montar el CD-ROM
 Luego, debe montar el CD-ROM, ya sea físicamente o utilizando el archivo .iso.
+    
     3. Crear una carpeta de trabajo
 Cree una carpeta donde se puedan guardar los rendimientos del programa AGROS, por ejemplo: D:\AGROS\.
+    
     4. Iniciar DOSBox y montar unidades
 Al abrir DOSBox, el símbolo del sistema por defecto será Z:\>.
+
 Para que sus directorios estén disponibles dentro de DOSBox, use el comando mount. Ejemplos:
+
         ◦ En Windows:
 mount C D:\AGROS
+
         ◦ En Linux:
 mount c /home/usuario/AGROS
+
 Luego, cambie a la unidad montada con el comando C:. Si todo está correctamente configurado, debería ver C:\> como símbolo del sistema.
+
        Para montar el CD-ROM con soporte MSCDEX:
         ◦ En Windows:
 mount D F:\ -t cdrom
+
         ◦ En Linux:
 mount D /media/cdrom -t cdrom
+
        Finalmente, para iniciar el programa AGROS:
        D:
        AGROS
        (Nota: Es recomendable aumentar la memoria asignada a DOSBox usando Ctrl + F12, de lo contrario el programa puede funcionar con lentitud).
+   
     5. Exportar datos desde AGROS
 Desde aquí podrá acceder a la información contenida en los CD-ROMs.
+
 Para exportar los datos de los AGEBS:
 EXPORTAR -> GENERAL -> TOTAL → exportar a "C:\"
+
     6. Archivos generados por AGROS
 AGROS genera archivos con extensión .SDF, que contienen la información a nivel AGEB.
+
         ◦ Archivos terminados en _A: datos anuales
+        
         ◦ Archivos terminados en _G: datos generales
+        
         ◦ Archivos terminados en _P: datos de cultivos perennes
+        
        Los discos están organizados por estados. Cada disco incluye una selección de estados, y las carpetas internas contienen únicamente información por entidad.
+       
 El listado de estados y sus claves es el siguiente:
+
 1=AGS, 2=BC, 3=BCS, 4=CAM, 5=COA, 6=COL, 7=CHP, 8=CHH, 9=CDMX, A=DUR, B=GUA, C=GRO, D=HDO, E=JAL, F=MEX, G=MIC, H=MOR, I=NAY, J=NLE, K=OAX, L=PUE, M=QUE, N=ROO, O=SLP, P=SIN, Q=SON, R=TAB, S=TAM, T=TLA, U=VER, V=YUC, W=ZAC
+
        Los archivos .SDF no incluyen nombres de variables, pero estos pueden encontrarse en los archivos VARS.SCA y VARS.SCE dentro de las carpetas correspondientes a cada estado. El orden de las variables varía según el estado.
